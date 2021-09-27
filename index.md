@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>باحث الحديث</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        #skey {
+            box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+            border: 1px solid #413f3e;
+            border-radius: 10px;
+            text-align: right;
+            padding: 5px;
+        }
+
+        #skey:hover {
+            border: none;
+
+        }
+
+
+        #bsearch {
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+
+        #dorar {
+            padding: 5px;
+            text-align: right !important;
+        }
+
+        .hadith {
+            text-align: right !important;
+
+        }
+
+        .hadith {
+            text-align: right !important;
+
+        }
+
+        .hadith-info {
+            text-align: right !important;
+        }
+
+        .search-keys {
+            color: red;
+        }
+
+        .info-subtitle {
+            color: rgb(155, 35, 61);
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-family: 'Almarai', sans-serif;
+        }
+
+        h3 {
+            font-size: 14px;
+            font-family: 'Almarai', sans-serif;
+            padding: 5px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        function check_hadith() {
+            $.getJSON("https://dorar.net/dorar_api.json?skey=" + $("#skey").val() + "&callback=?",
+                function (data) {
+                    console.log(data.ahadith.result);
+                    $("#dorar").html("");
+                    $('#dorar').html(data.ahadith.result);
+                });
+
+        }
+    </script>
+    <div id="page-wrap">
+        <filter>
+            <h1 class="center">الباحث في الحديث</h1>
+            <h3 class="center">يمكنك الموقع من البحث عن الأحاديث النبوية والتحقق من صحتها إنطلاقا من كلمة أو جملة من
+                الحديث</h3>
+            <div class="container filter center">
+                <input type="text" placeholder="...بحث" id="skey" />
+                <button id="bsearch" class="waves-effect waves-light btn" onclick="check_hadith()">
+                    ⌕ بحث
+                </button>
+
+            </div>
+    </div>
+    </filter>
+    <main>
+        <p>
+            <div class="container">
+                <div id="dorar"></div>
+            </div>
+        </p>
+    </main>
+    </div>
+</body>
+
+</html>
