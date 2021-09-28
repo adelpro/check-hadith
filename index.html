@@ -12,18 +12,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json" />
-    <script type="module">
-        import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
-        const el = document.createElement('pwa-update');
-        document.body.appendChild(el);
-     </script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/16x16.png">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script>
+        /*service worker registration */
+        function loadServiceWorker() {
+            if ("serviceWorker" in navigator) {
+                window.addEventListener("load", function () {
+                    navigator.serviceWorker
+                        .register("/serviceWorker.js")
+                        .then((res) => console.log("service worker registered"))
+                        .catch((err) => console.log("service worker not registered", err));
+                });
+            }
+        }
+        loadServiceWorker();
+    </script>
 </head>
 
 <body>
     <div id="page-wrap" class="center">
 
         <head>
-            <img src=".\images\logo.png" width="256" height="265" class="img-responsive circle center" alt="image"
+            <img src=".\images\128x128.png" width="128" height="128" class="img-responsive circle center" alt="logo"
                 itemprop="image"></img>
             <h1 class="center" itemprop="name">الباحث في الحديث</h1>
             <h3 class="center">يمكنك الموقع من البحث عن الأحاديث النبوية والتحقق من صحتها إنطلاقا من كلمة أو جملة من
@@ -31,23 +46,20 @@
             </h3>
         </head>
         <filter>
-
             <div class="container filter center">
-                <input type="text" placeholder="...بحث" id="skey" />
+                <input type="text" placeholder="...بحث" id="skey" autocomplete="off" />
                 <button id="bsearch" class="waves-effect waves-light btn" onclick="check_hadith()">
                     ⌕ بحث
                 </button>
-
             </div>
-    </div>
-    </filter>
-    <main>
-        <p>
-            <div class="container">
-                <div id="dorar"></div>
-            </div>
-        </p>
-    </main>
+        </filter>
+        <main>
+            <p>
+                <div class="container">
+                    <div id="dorar"></div>
+                </div>
+            </p>
+        </main>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
