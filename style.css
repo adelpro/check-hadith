@@ -3,18 +3,19 @@
     border: 1px solid #413f3e;
     border-radius: 10px;
     text-align: right;
-    padding: 5px;
-}
+    padding: 0px;
+    flex: 1;
+ }
 
 #skey:hover {
     border: none;
-
 }
 
 
 #bsearch {
     cursor: pointer;
     border-radius: 5px;
+    vertical-align: middle;
 }
 
 
