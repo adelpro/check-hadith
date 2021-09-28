@@ -1,0 +1,11 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "adelpro.github",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "adelpro.github",
+  "start_url": "/",
+  "theme_color": "#ffffff"
+}
