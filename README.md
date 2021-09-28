@@ -1,2 +1,5 @@
 # check_hadith
-Check hadith nabawi with dorar API
+Check hadith nabawi using dorar API.
+
+website:
+adelpro.github.io/check-hadith
