@@ -2,4 +2,4 @@
 Check hadith nabawi using dorar API.
 
 website:
-adelpro.github.io/check-hadith
+https://adelpro.github.io/check-hadith
