@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,78 +10,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json" />
+    <script type="module">
+        import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+        const el = document.createElement('pwa-update');
+        document.body.appendChild(el);
+     </script>
 </head>
+
 <body>
-    <style>
-        #skey {
-            box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
-            border: 1px solid #413f3e;
-            border-radius: 10px;
-            text-align: right;
-            padding: 5px;
-        }
+    <div id="page-wrap" class="center">
 
-        #skey:hover {
-            border: none;
-        }
-        #bsearch {
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        #dorar {
-            padding: 5px;
-            text-align: right !important;
-        }
-        .hadith {
-            text-align: right !important;
-
-        }
-
-        .hadith {
-            text-align: right !important;
-        }
-
-        .hadith-info {
-            text-align: right !important;
-        }
-        .search-keys {
-            color: red;
-        }
-        .info-subtitle {
-            color: rgb(155, 35, 61);
-            text-decoration: underline;
-        }
-        h1 {
-            font-family: 'Almarai', sans-serif;
-            font-size: 30px;
-            font-size: 7vw;
-        }
-
-        h3 {
-            font-size: 14px;
-            font-family: 'Almarai', sans-serif;
-            padding: 5px;
-            margin: 5px;
-        }
-    </style>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-        function check_hadith() {
-            $.getJSON("https://dorar.net/dorar_api.json?skey=" + $("#skey").val() + "&callback=?",
-                function (data) {
-                    console.log(data.ahadith.result);
-                    $("#dorar").html("");
-                    $('#dorar').html(data.ahadith.result);
-                });
-
-        }
-    </script>
-    <div id="page-wrap">
-        <filter>
-            <h1 class="center">الباحث في الحديث</h1>
+        <head>
+            <img src=".\images\logo.png" width="256" height="265" class="img-responsive circle center" alt="image"
+                itemprop="image"></img>
+            <h1 class="center" itemprop="name">الباحث في الحديث</h1>
             <h3 class="center">يمكنك الموقع من البحث عن الأحاديث النبوية والتحقق من صحتها إنطلاقا من كلمة أو جملة من
-                الحديث</h3>
+                الحديث
+            </h3>
+        </head>
+        <filter>
+
             <div class="container filter center">
                 <input type="text" placeholder="...بحث" id="skey" />
                 <button id="bsearch" class="waves-effect waves-light btn" onclick="check_hadith()">
@@ -97,6 +48,20 @@
             </div>
         </p>
     </main>
-  </div>  
-  </body>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        function check_hadith() {
+            $.getJSON("https://dorar.net/dorar_api.json?skey=" + $("#skey").val() + "&callback=?",
+                function (data) {
+                    console.log(data.ahadith.result);
+                    $("#dorar").html("");
+                    $('#dorar').html(data.ahadith.result);
+                });
+
+        }
+    </script>
+</body>
+
 </html>
