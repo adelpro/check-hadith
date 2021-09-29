@@ -34,36 +34,54 @@
     </script>
 </head>
 
-<body>
-    <div id="page-wrap" class="center">
+<body itemscope itemtype="http://schema.org/WebPage">
+    <a href="#navigation" class="nav-trigger">
+        Menu <span></span>
+    </a>
+    <nav class="nav-container" id="navigation">
+        <header>
+            <h2>الباحث في الحديث</h2>
+        </header>
 
-        <head>
-             <img src=".\images\256x256.png" width="256" height="256" class="img-responsive circle center" alt="logo"
-                itemprop="image"></img>
-            <h1 class="center" itemprop="name">الباحث في الحديث</h1>
-            <h3 class="center">يمكنك الموقع من البحث عن الأحاديث النبوية والتحقق من صحتها إنطلاقا من كلمة أو جملة من
-                الحديث
-            </h3>
-        </head>
-        <filter>
-            <div class="container filter center">
-                <input type="text" placeholder="...بحث" id="skey" autocomplete="off" />
-                <button id="bsearch" class="waves-effect waves-light btn" onclick="check_hadith()">
-                    ⌕ بحث
-                </button>
-            </div>
-        </filter>
-        <main>
-            <p>
-                <div class="container">
-                    <div id="dorar"></div>
-                </div>
-            </p>
-        </main>
-    </div>
+        <ul class="nav">
+            <li><a href="/about-us.html">حول الموقع</a></li>
+            <li><a href="/privacy.html">سياسة الخصوصية</a></li>
+        </ul>
+    </nav>
+    <div class="overlay"></div> <!-- improve main element 3d movement -->
+    <header itemscope itemtype="http://schema.org/WPHeader" class="center">
+        <img src=".\images\256x256.png" width="256" height="256" class="img-responsive circle center" alt="logo"
+            itemprop="image"></img>
+        <h1 class="center" itemprop="name">الباحث في الحديث</h1>
+        <h3 class="center">يمكنك الموقع من البحث عن الأحاديث النبوية والتحقق من صحتها إنطلاقا من كلمة أو جملة من
+            الحديث
+        </h3>
+    </header>
+    <filter>
+        <div class="container filter center">
+            <input type="text" placeholder="...بحث" id="skey" autocomplete="off" />
+            <button id="bsearch" class="waves-effect waves-light btn" onclick="check_hadith()">
+                ⌕ بحث
+            </button>
+        </div>
+    </filter>
+    <main>
+        <section class="intro">
+            <main>
+                <ul id="cards-container">
+                    <li>
+                        <p class="card-content right">
+                            <div id="dorar"></div>
+                        </p>
+                    </li>
+                </ul>
+            </main>
+        </section>
+    </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
+        //API load
         function check_hadith() {
             $.getJSON("https://dorar.net/dorar_api.json?skey=" + $("#skey").val() + "&callback=?",
                 function (data) {
@@ -73,7 +91,18 @@
                 });
 
         }
+        //Menu
+        var navTrigger = document.getElementsByClassName('nav-trigger')[0],
+            body = document.getElementsByTagName('body')[0];
+
+        navTrigger.addEventListener('click', toggleNavigation);
+
+        function toggleNavigation(event) {
+            event.preventDefault();
+            body.classList.toggle('nav-open');
+        }
     </script>
+
 </body>
 
 </html>
