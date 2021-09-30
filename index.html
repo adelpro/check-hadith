@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الباحث في الحديث</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,11 +47,18 @@
         <ul class="nav">
             <li><a href=".\about-us.html">حول الموقع</a></li>
             <li><a href=".\privacy.html">سياسة الخصوصية</a></li>
+            <li id="social">
+                <a class="smGlobalBtn facebookBtn" href="https://www.facebook.com/wathakker.wakf" ><i class="fa-brands fa-facebook-f"></i></a>
+                <a class="smGlobalBtn" href="https://twitter.com/adelpro" ><i class="fa-brands fa-twitter"></i></a>
+                <a class="smGlobalBtn" href="https://m.me/wathakker.wakf" ><i class="fa-brands fa-facebook-messenger"></i></a>
+                <a class="smGlobalBtn" href="https://www.t.me/wathakkerwakf" ><i class="fab fa-telegram-plane"></i></a>
+                </li>
         </ul>
+        
     </nav>
     <div class="overlay"></div> <!-- improve main element 3d movement -->
     <header itemscope itemtype="http://schema.org/WPHeader" class="center">
-        <img src=".\images\256x256.png" width="256" height="256" class="img-responsive circle center" alt="logo"
+        <img src=".\images\192x192.png" width="192" height="192" class="img-responsive circle center" alt="logo"
             itemprop="image"></img>
         <h1 class="center" itemprop="name">الباحث في الحديث</h1>
         <h3 class="center">يمكنك الموقع من البحث عن الأحاديث النبوية والتحقق من صحتها إنطلاقا من كلمة أو جملة من
@@ -67,17 +75,23 @@
     </filter>
     <main>
         <section class="intro">
+            
             <main>
                 <ul id="cards-container">
                     <li>
                         <p class="card-content right">
-                            <div id="dorar"></div>
+                            <div id="dorar" class="right"></div>
                         </p>
                     </li>
                 </ul>
             </main>
         </section>
     </main>
+    <footer class="footer">
+     <span class="center">
+       الباحث في الحديث ©2021    
+     </span>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
