@@ -1,5 +1,5 @@
-const staticCache = "Checkhadith-cache-v5";
-const dynamicCache = "Checkhadith-dynamic-v5";
+const staticCache = "Checkhadith-cache-v6";
+const dynamicCache = "Checkhadith-dynamic-v6";
 const assets = [
   "/",
   "./index.html",
