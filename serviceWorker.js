@@ -16,6 +16,7 @@ const assets = [
   "./images/256x256.png",
   "./images/512x512.png",
   "./images/monochrome.png",
+  "./images/192x192.png"
 ];
 // cache size limit function
 const limitCacheSize = (name, size) => {
