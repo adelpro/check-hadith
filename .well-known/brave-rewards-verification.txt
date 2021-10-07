@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: adelpro.github.io
+Token: 31f8469888415b8723fa7838dd34e56ccc1799ac0df9bcd16b6fdc8d8ba1576c
