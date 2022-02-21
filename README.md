@@ -33,9 +33,9 @@ Check hadith nabawi using dorar API.
 <a target="_blank" rel="noopener" title="Microsoft Store" href="https://www.microsoft.com/store/apps/9NN5H6LV53DS?cid=storebadge&amp;ocid=badge"><img class="img-responsive" src="https://developer.microsoft.com/store/badges/images/Arabic_get_it_from_MS.png" alt="احصل عليه من Windows Store" style="width: 180px; height: 80px;"></a>
 
 ## Support us ❤️
-<a href="https://www.buymeacoffee.com/Adel.benyahia" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-green.png" alt="Buy Me A Coffee" height="41" width="174"></a>
-<a href="https://https://www.paypal.me/adelbenyahia" target="_blank"><img src="https://github.com/adelpro/adelpro.github.io/raw/818b737d35a084412e0a7b5186efa908270bb35a/paypal-logo.png" alt="Buy Me A Coffee" height="41" width="174"></a>
-
+[![Buymeacoffee](https://badgen.net/badge/icon/buymeacoffee?icon=buymeacoffee&label)](https://www.buymeacoffee.com/Adel.benyahia/)
+[![PayPal](https://badgen.net/badge/icon/PayPal?icon=https://simpleicons.now.sh/paypal/fff&label)](https://www.paypal.com/paypalme/adelbenyahia)
+[![BitCoin](https://badgen.net/badge/icon/bitcoin?icon=bitcoin&label)](bitcoin:1PstR1HYTG8FbVRR7YZhQftYumVAURXuq7?label=Quranipfs&message=Payment%20to%20Quranipfs)
 ##
 ![](https://komarev.com/ghpvc/?username=adelpro&style=flat-squar&color=brightgreen)
 
