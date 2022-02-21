@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+        "namespace": "android_app",
+            "package_name": "app.web.checkhadith.twa",
+                "sha256_cert_fingerprints": [
+                      "80:0A:12:65:54:2F:8B:7A:51:53:35:3F:24:C5:28:13:F9:80:0F:53:73:D2:C4:E2:DA:6C:E7:06:46:B1:9B:31"
+                          ]
+                            }
+                            }]
