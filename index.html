@@ -110,17 +110,20 @@
     <header itemscope itemtype="http://schema.org/WPHeader" class="center">
         <img src="./images/192x192.png" width="192" height="192" class="img-responsive circle center" alt="logo"
             itemprop="image"></img>
+            <div class="container">
         <h1 class="center" itemprop="name">الباحث في الحديث</h1>
-        <h3 class="center">يمكنك الموقع من البحث عن الأحاديث النبوية والتحقق من صحتها إنطلاقا من كلمة أو جملة من
+        <h6 class="center">يمكنك الموقع من البحث عن الأحاديث النبوية والتحقق من صحتها إنطلاقا من كلمة أو جملة من
             الحديث
-        </h3>
+        </h6>
+</div>
     </header>
     <filter>
-        <div class="container filter center">
+        <div class="container filter center input-group" dir="rtl">
             <input type="text" placeholder="...بحث" id="skey" autocomplete="off" />
-            <button id="bsearch" class="waves-effect waves-light btn" onclick="check_hadith()">
+            <button id="bsearch" class="waves-effect waves-light btn-small" onclick="check_hadith()" >
                 ⌕ بحث
-            </button>
+                </button>
+           
         </div>
     </filter>
         <main>
@@ -139,7 +142,7 @@
     </main>
     <footer class="footer">
      <span class="center">
-       الباحث في الحديث ©2021    
+     الباحث في الحديث ©2021    
      </span>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
