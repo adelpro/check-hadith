@@ -7,7 +7,6 @@
 ![Check-hadith](https://adelpro.github.io/check-hadith/images/256x256.png)
 
 Check hadith nabawi using dorar API.
-
 يمكنك الموقع من البحث عن الأحاديث النبوية والتحقق من صحتها إنطلاقا من كلمة أو جملة من الحديث
 
 ## Contact us
