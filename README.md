@@ -1,5 +1,12 @@
 # Check-hadith الباحث في الحديث
 
+
+Version 2 is comming soon  using React native -  الإصدار 2 من الموقع قيد التطوير حاليا
+
+
+
+
+
 ## Website موقع الأنترنات
 <a href="https://adelpro.github.io/check-hadith/index.html" target="_blank">adelpro.github.io/check-hadith</a>
 
