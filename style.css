@@ -7,27 +7,26 @@
   box-sizing: border-box;
 }
 
-/*Social round */
+/* Social round */
 #social {
   margin: 20px 10px;
   text-align: center;
 }
 
+/* global button class */
 .smGlobalBtn {
-  /* global button class */
   display: inline-block;
   position: relative;
   cursor: pointer;
   width: 50px;
   height: 50px;
   border: 2px solid #ddd;
-  /* add border to the buttons */
   box-shadow: 0 3px 3px #999;
-  padding: 0px;
+  padding: 0;
   text-decoration: none;
   text-align: center;
   color: #fff;
-  font-size: 20px !important;
+  font-size: 20px;
   font-weight: normal;
   line-height: 2em;
   border-radius: 27px;
@@ -35,45 +34,21 @@
   -webkit-border-radius: 27px;
 }
 
-/*Social round*/
-
-.input-group {
-  display: flex;
-  flex-direction: row;
-  padding: 8px 10px;
-  vertical-align: middle;
-  font-size: 0.8em;
-  line-height: 0.8em;
-}
-
-.input-group input {
-  flex-grow: 1;
-  border: none;
-  cursor: pointer;
-  vertical-align: middle;
-}
-
-.input-group input:focus {
-  outline: none;
-}
-
+/* Social round */
 #dorar {
   padding: 5px;
-  text-align: right !important;
+  text-align: right;
   width: fit-content;
   height: fit-content;
 }
 
 .hadith {
-  text-align: right !important;
+  text-align: right;
 }
 
-.hadith {
-  text-align: right !important;
-}
 
 .hadith-info {
-  text-align: right !important;
+  text-align: right;
 }
 
 .search-keys {
@@ -94,109 +69,7 @@
   margin: auto;
 }
 
-.menu-icon {
-  width: 50px;
-  height: 50px;
-  background: #2c3a47;
-  color: #fff;
-  text-align: center;
-  line-height: 50px;
-  font-size: 20px;
-  z-index: 2;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.2s linear;
-}
-
-.menu-icon:hover {
-  opacity: 0.9;
-  transform: scale(1.1);
-}
-
-.navigation-menu {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background: #2c3a47;
-  top: 0;
-  right: -100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.6s;
-}
-
-.navigation-menu nav {
-  display: grid;
-}
-
-.navigation-menu li {
-  margin: 20px 0;
-  overflow: hidden;
-  direction: rtl;
-}
-
-.navigation-menu a {
-  color: #fff;
-  font-size: 40px;
-  font-weight: 700;
-  position: relative;
-  display: inline-block;
-  transform: translateY(40px);
-}
-
-.navigation-menu a::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 15px;
-  background: #fd7474;
-  bottom: 0;
-  left: 0;
-  border-radius: 15px;
-  z-index: -1;
-  transition: 0.2s linear;
-}
-
-.navigation-menu a:hover::before {
-  width: 100%;
-}
-
-.menu-icon.active {
-  background: #f1f1f1;
-  color: #2c3a47;
-}
-
-.navigation-menu.active {
-  right: 0;
-}
-
-.navigation-menu.active a {
-  transform: translateY(0);
-  transition: 0.6s linear;
-}
-
-.navigation-menu.active li:nth-child(1) a {
-  transition-delay: 0.2s;
-}
-
-.navigation-menu.active li:nth-child(2) a {
-  transition-delay: 0.4s;
-}
-
-.navigation-menu.active li:nth-child(3) a {
-  transition-delay: 0.6s;
-}
-
-.navigation-menu.active li:nth-child(4) a {
-  transition-delay: 0.8s;
-}
-
-.navigation-menu.active li:nth-child(5) a {
-  transition-delay: 1s;
-}
-
-/*nav menu */
+/* nav menu */
 *,
 *::after,
 *::before {
@@ -208,7 +81,7 @@ main {
   z-index: 1;
   height: 100vh;
   overflow: auto;
-  box-shadow: 0 0 50px #ffffff;
+  box-shadow: 0 0 50px #fff;
   transition: transform 0.5s;
   direction: rtl;
 }
@@ -218,7 +91,7 @@ main {
 }
 
 .intro {
-  height: 100vh+10px;
+  height: 100vh;
   width: 100%;
   display: table;
   background-size: cover;
@@ -231,7 +104,6 @@ main {
   right: 40px;
   height: 44px;
   width: 44px;
-
   overflow: hidden;
   color: transparent;
   white-space: nowrap;
@@ -335,7 +207,7 @@ main {
 .nav-container h2 {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #aaaaaa;
+  color: #aaa;
   margin: 2em 0;
 }
 
@@ -354,7 +226,6 @@ main {
   font-family: "Almarai", sans-serif;
   display: inline-block;
   transition: ease-in-out 0.3s;
-
 }
 
 .nav a:hover {
@@ -405,7 +276,7 @@ main {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #aaaaaa;
+  background-color: #aaa;
   color: white;
   text-align: center;
 }
@@ -506,7 +377,6 @@ main {
   border-radius: 4;
   border: 2px solid #38464b;
   border-radius: 10px;
-  padding: 5px;
   width: 100%;
   max-width: 600px;
   height: 40px;
