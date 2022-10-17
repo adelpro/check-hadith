@@ -1,10 +1,12 @@
-const staticCache = "Checkhadith-cache-v6";
-const dynamicCache = "Checkhadith-dynamic-v6";
+const staticCache = "Checkhadith-cache-v7";
+const dynamicCache = "Checkhadith-dynamic-v7";
 const assets = [
   "/",
   "./index.html",
+  "./download.html",
+  "./about.html",
+  "./privacy.html",
   "./fallback.html",
-  "./404.html",
   "./style.css",
   "./favicon.ico",
   "./images/16x16.png",
@@ -13,10 +15,15 @@ const assets = [
   "./images/128x128.png",
   "./images/64x64.png",
   "./images/90x90.png",
+  "./images/192x192.png",
   "./images/256x256.png",
   "./images/512x512.png",
   "./images/monochrome.png",
-  "./images/192x192.png"
+  "./images/192x192.png",
+  "https://code.jquery.com/jquery-3.6.0.min.js",
+  "https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap",
+  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/webfonts/fa-brands-400.woff2",
+  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css",
 ];
 // cache size limit function
 const limitCacheSize = (name, size) => {
@@ -57,13 +64,12 @@ self.addEventListener("fetch", (evt) => {
       .then((cacheRes) => {
         return (
           cacheRes ||
-          fetch(evt.request).then((fetchRes) => {
-            return caches.open(dynamicCache).then((cache) => {
-              cache.put(evt.request.url, fetchRes.clone());
-              // check cached items size
-              limitCacheSize(dynamicCache, 30);
-              return fetchRes;
-            });
+          fetch(evt.request).then(async (fetchRes) => {
+            const cache = await caches.open(dynamicCache);
+            cache.put(evt.request.url, fetchRes.clone());
+            // check cached items size
+            limitCacheSize(dynamicCache, 30);
+            return fetchRes;
           })
         );
       })

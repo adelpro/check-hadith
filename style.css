@@ -1,3 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Almarai", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
 /*Social round */
 #social {
   margin: 20px 10px;
@@ -11,7 +20,8 @@
   cursor: pointer;
   width: 50px;
   height: 50px;
-  border: 2px solid #ddd; /* add border to the buttons */
+  border: 2px solid #ddd;
+  /* add border to the buttons */
   box-shadow: 0 3px 3px #999;
   padding: 0px;
   text-decoration: none;
@@ -26,22 +36,25 @@
 }
 
 /*Social round*/
-#skey {
-  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
-  border: 1px solid #413f3e;
-  border-radius: 10px;
-  text-align: right;
-  padding: 0px;
-  flex: 1;
-}
-#skey:hover {
-  border: none;
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  padding: 8px 10px;
+  vertical-align: middle;
+  font-size: 0.8em;
+  line-height: 0.8em;
 }
 
-#bsearch {
+.input-group input {
+  flex-grow: 1;
+  border: none;
   cursor: pointer;
-  border-radius: 5px;
   vertical-align: middle;
+}
+
+.input-group input:focus {
+  outline: none;
 }
 
 #dorar {
@@ -70,30 +83,6 @@
 .info-subtitle {
   color: rgb(155, 35, 61);
   text-decoration: underline;
-}
-
-h1 {
-  font-family: "Almarai", sans-serif;
-  font-size: 20px;
-  font-size: 5vw;
-}
-
-h3 {
-  font-size: 14px;
-  font-family: "Almarai", sans-serif;
-}
-
-h2 {
-  font-size: 14px;
-  font-family: "Almarai", sans-serif;
-}
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Ubuntu", sans-serif;
-  text-decoration: none;
-  list-style: none;
-  box-sizing: border-box;
 }
 
 .inner-width {
@@ -173,15 +162,6 @@ h2 {
   width: 100%;
 }
 
-p {
-  max-width: 80%;
-  margin: auto;
-  padding: 40px 0;
-  font-size: 18px;
-  line-height: 1.4em;
-  text-align: justify;
-}
-
 .menu-icon.active {
   background: #f1f1f1;
   color: #2c3a47;
@@ -215,6 +195,7 @@ p {
 .navigation-menu.active li:nth-child(5) a {
   transition-delay: 1s;
 }
+
 /*nav menu */
 *,
 *::after,
@@ -337,7 +318,7 @@ main {
   right: 0;
   height: 100%;
   width: 90%;
-  max-width: 460px;
+  max-width: 350px;
   padding: 2em 3.5em;
   background: #f3f3f3;
   overflow: auto;
@@ -352,11 +333,10 @@ main {
 }
 
 .nav-container h2 {
-  font-size: 15px;
+  font-size: 1.2rem;
   font-weight: bold;
-  text-transform: uppercase;
   color: #aaaaaa;
-  margin: 1.5em 0;
+  margin: 2em 0;
 }
 
 .nav {
@@ -370,13 +350,20 @@ main {
   text-decoration: none;
   color: #1f2b3d;
   transform: translateZ(0);
-  font-size: 7vw;
+  font-size: 2rem;
   font-family: "Almarai", sans-serif;
   display: inline-block;
+  transition: ease-in-out 0.3s;
+
 }
+
+.nav a:hover {
+  transform: scale(1.1);
+}
+
 @media screen and (min-width: 1200px) {
   .nav a {
-    font-size: 40px;
+    font-size: 1.5rem;
   }
 }
 
@@ -411,6 +398,7 @@ main {
     transform: translateX(0);
   }
 }
+
 /*nav menu*/
 .footer {
   position: fixed;
@@ -420,4 +408,138 @@ main {
   background-color: #aaaaaa;
   color: white;
   text-align: center;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.flex img {
+  width: 180px;
+  height: 80px;
+}
+
+.header {
+  margin-top: 50px;
+}
+
+.header h1 {
+  text-align: center;
+  font-size: 4rem;
+  margin: 10px;
+  padding: 10px;
+}
+
+.header h6 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 5px;
+  padding: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .header h6 {
+    font-size: 1rem;
+  }
+
+}
+
+.main {
+  margin: 0;
+}
+
+.main h1 {
+  text-align: center;
+  font-size: 4rem;
+  margin: 10px;
+  padding: 10px;
+}
+
+.main h6 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 5px;
+  padding: 5px;
+}
+
+.main p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 5px;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .main h1 {
+    font-size: 2.5rem;
+  }
+
+  .main h6 {
+    font-size: 1.5rem;
+  }
+
+  .main p {
+    font-size: 1.2rem;
+  }
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4;
+  border: 2px solid #38464b;
+  border-radius: 10px;
+  padding: 5px;
+  width: 100%;
+  max-width: 600px;
+  height: 40px;
+  margin: 10px;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 2px;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  font-size: 1.2rem;
+}
+
+.search input::placeholder {
+  padding-right: 10px;
+}
+
+.search button {
+  position: absolute;
+  cursor: pointer;
+  border: none;
+  left: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #ffff;
+  height: 100%;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -2,21 +2,21 @@
   xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
 
 <head>
-  <meta charset='UTF-8'>
+  <meta charset='UTF-8' />
   <title>تطبيق الموقع</title>
   <!--blog meta data -->
-  <meta expr:content='الباحث في الحديث' property='og:site_name'>
-  <meta content='website' property='og:type'>
-  <meta content='https://adelpro.github.io/check-hadith/images/256x256.png' property='og:image'>
-  <meta content='256' property='og:image:width'>
-  <meta content='256' property='og:image:height'>
-  <meta content='100001161316746' property='fb:admins'>
-  <meta content='https://www.facebook.com/adel.benyahia' property='article:author'>
-  <meta content='ar_AR' property='og:locale'>
-  <meta content='DZ' name='geo.region'>
-  <meta content='summary' name='twitter:card'>
-  <meta content='@adelpro' name='twitter:site'>
-  <meta content='@adelpro' name='twitter:creator'>
+  <meta expr:content='الباحث في الحديث' property='og:site_name' />
+  <meta content='website' property='og:type' />
+  <meta content='https://adelpro.github.io/check-hadith/images/256x256.png' property='og:image' />
+  <meta content='256' property='og:image:width' />
+  <meta content='256' property='og:image:height' />
+  <meta content='100001161316746' property='fb:admins' />
+  <meta content='https://www.facebook.com/adel.benyahia' property='article:author' />
+  <meta content='ar_AR' property='og:locale' />
+  <meta content='DZ' name='geo.region/'>
+  <meta content='summary' name='twitter:card' />
+  <meta content='@adelpro' name='twitter:site' />
+  <meta content='@adelpro' name='twitter:creator' />
   <meta expr:content='الباحث في الحديث' name='twitter:title' />
   <meta
     expr:content='
@@ -28,10 +28,11 @@
   <meta content='width=device-width, user-scalable=no' name='viewport' />
   <meta content='الحديث النبوي الصحيح محمد رسول الله' name='keywords' />
   <meta charset='UTF-8'>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href=".\style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href=".\style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- PWA metadata -->
   <meta content='#000000' name='theme-color' />
   <link href='./images/32x32.png' rel='icon' type='image/x-icon' />
@@ -49,9 +50,9 @@
   <!-- Add to home screen for Windows-->
   <meta content='./images/512x512.png' name='msapplication-TileImage' />
   <meta content='#000000' name='msapplication-TileColor' />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap" rel="stylesheet" />
   <script>
     /*service worker registration */
     function loadServiceWorker() {
@@ -81,73 +82,57 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
-  <a href="#navigation" class="nav-trigger">
+  <button href="#navigation" class="nav-trigger" aria-haspopup="true" aria-controls="navigation" id="navigation-button">
     Menu <span></span>
-  </a>
-  <nav class="nav-container" id="navigation">
+  </button>
+  <nav class="nav-container" id="navigation" role="menu" aria-labelledby="navigation-button">
     <header>
       <h2>الباحث في الحديث</h2>
     </header>
 
     <ul class="nav">
-      <li><a href=".\index.html">الصفحة الرئيسية</a></li>
-      <li><a href=".\privacy.html">سياسة الخصوصية</a></li>
-      <li><a href=".\about.html">حول الموقع</a></li>
+      <li role="none"><a href=".\index.html" role="menuitem">الصفحة الرئيسية</a></li>
+      <li role="none"><a href=".\privacy.html" role="menuitem">سياسة الخصوصية</a></li>
+      <li role="none"><a href=".\about.html" role="menuitem">حول الموقع</a></li>
       <li id="social">
-        <a class="smGlobalBtn facebookBtn" href="https://www.facebook.com/wathakker.wakf" ><i class="fa-brands fa-facebook-f"></i></a>
-        <a class="smGlobalBtn" href="https://twitter.com/adelpro" ><i class="fa-brands fa-twitter"></i></a>
-        <a class="smGlobalBtn" href="https://m.me/wathakker.wakf" ><i class="fa-brands fa-facebook-messenger"></i></a>
-        <a class="smGlobalBtn" href="https://www.t.me/wathakkerwakf" ><i class="fab fa-telegram-plane"></i></a>
-        </li>
+        <a class="smGlobalBtn facebookBtn" href="https://www.facebook.com/wathakker.wakf"><i
+            class="fa-brands fa-facebook-f"></i></a>
+        <a class="smGlobalBtn" href="https://twitter.com/adelpro"><i class="fa-brands fa-twitter"></i></a>
+        <a class="smGlobalBtn" href="https://m.me/wathakker.wakf"><i class="fa-brands fa-facebook-messenger"></i></a>
+        <a class="smGlobalBtn" href="https://www.t.me/wathakkerwakf"><i class="fab fa-telegram-plane"></i></a>
+      </li>
     </ul>
   </nav>
   <div class="overlay"></div> <!-- improve main element 3d movement -->
-  <header class="center" itemscope itemtype="http://schema.org/WPHeader">
+  <header class="center head" itemscope itemtype="http://schema.org/WPHeader">
     <img src=".\images\256x256.png" width="256" height="265" class="img-responsive circle center" alt="checkhadith"
-      itemprop="image"></img>
-
+      itemprop="image" />
   </header>
-  <main>
-    <section id="sec-page">
-      <ul id="cards-container">
-        <li style="width: 80%!important">
-          <!--<span class="center"><i class="fas fa-cloud-download-alt"></i></span>-->
-          <h1 class="card-title center">تطبيق الموقع</h1>
-          <p class="card-content right">
-            <div class="container">
-              <div style="text-align: center; padding: 20px">
-                يمكنك تنزيل تطبيق الموقع من هنا
-              </div>
-              <div class="row" style="text-align: center;">
-                <div class="col s12 m4 l4">
-                  <a
-                    href='https://play.google.com/store/apps/details?id=app.web.checkhadith.twa&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img
-                      alt='احصل عليه من Google Play'
-                      src='https://play.google.com/intl/en_us/badges/static/images/badges/ar_badge_web_generic.png'
-                      style="width: 180px; height: 80px;" /></a>
-                </div>
-                <div class="col s12 m4 l4">
-                  <a target="_blank" rel="noopener" title="Microsoft Store" href="https://www.microsoft.com/store/apps/9NN5H6LV53DS?cid=storebadge&amp;ocid=badge"><img class="img-responsive" src="https://developer.microsoft.com/store/badges/images/Arabic_get_it_from_MS.png" alt="احصل عليه من Windows Store" style="width: 180px; height: 80px;"></a>
-                </div>
-                <div class="col s12 m4 l4">
-                  <a target="_blank" rel="noopener" title="Github" href='https://github.com/adelpro/check-hadith'><img
-                      class="img-responsive" src='./images/github-logo.png' alt='احصل عليه من Github'
-                      style='width: 180px; height: 80px;' /></a>
-                </div>
-              </div>
-            </div>
-          </p>
-        </li>
-      </ul>
+  <main class="main center">
+    <h1>تطبيق الموقع</h1>
+    <p>
+      يمكنك تنزيل تطبيق الموقع من هنا
+    </p>
+    <section class="flex">
+
+      <a
+        href='https://play.google.com/store/apps/details?id=app.web.checkhadith.twa&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img
+          alt='احصل عليه من Google Play'
+          src='https://play.google.com/intl/en_us/badges/static/images/badges/ar_badge_web_generic.png' /></a>
+      <a target="_blank" rel="noopener" title="Microsoft Store"
+        href="https://www.microsoft.com/store/apps/9NN5H6LV53DS?cid=storebadge&amp;ocid=badge"><img
+          src="https://developer.microsoft.com/store/badges/images/Arabic_get_it_from_MS.png"
+          alt="احصل عليه من Windows Store"></a>
+      <a target="_blank" rel="noopener" title="Github" href='https://github.com/adelpro/check-hadith'><img
+          src='./images/github-logo.png' alt='احصل عليه من Github' /></a>
+
     </section>
+
   </main>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script>
     //Menu
     var navTrigger = document.getElementsByClassName('nav-trigger')[0],
       body = document.getElementsByTagName('body')[0];
-
     navTrigger.addEventListener('click', toggleNavigation);
 
     function toggleNavigation(event) {
