@@ -1,7 +1,6 @@
 # Check-hadith الباحث في الحديث
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/b580d3158ca8406b85d1d1be848eae44)](https://www.codacy.com/gh/adelpro/check-hadith/dashboard?utm_source=github.com&utm_medium=referral&utm_content=adelpro/check-hadith&utm_campaign=Badge_Grade)
-
 ![](https://komarev.com/ghpvc/?username=adelpro&style=flat-squar&color=brightgreen)
 
 ## Website موقع الأنترنات
