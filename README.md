@@ -1,5 +1,9 @@
 # Check-hadith الباحث في الحديث
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/b580d3158ca8406b85d1d1be848eae44)](https://www.codacy.com/gh/adelpro/check-hadith/dashboard?utm_source=github.com&utm_medium=referral&utm_content=adelpro/check-hadith&utm_campaign=Badge_Grade)
+
+![](https://komarev.com/ghpvc/?username=adelpro&style=flat-squar&color=brightgreen)
+
 ## Website موقع الأنترنات
 
 <a href="https://adelpro.github.io/check-hadith/index.html" target="_blank">adelpro.github.io/check-hadith</a>
@@ -28,10 +32,6 @@ Check hadith nabawi using dorar API.
 [![Buymeacoffee](https://badgen.net/badge/icon/buymeacoffee?icon=buymeacoffee&label)](https://www.buymeacoffee.com/Adel.benyahia/)
 [![PayPal](https://badgen.net/badge/icon/PayPal?icon=https://simpleicons.now.sh/paypal/fff&label)](https://www.paypal.com/paypalme/adelbenyahia)
 [![BitCoin](https://badgen.net/badge/icon/bitcoin?icon=bitcoin&label)](bitcoin:1PstR1HYTG8FbVRR7YZhQftYumVAURXuq7?label=Quranipfs&message=Payment%20to%20Quranipfs)
-
-##
-
-![](https://komarev.com/ghpvc/?username=adelpro&style=flat-squar&color=brightgreen)
 
 [1.1]: http://i.imgur.com/tXSoThF.png "twitter icon with padding"
 [2.1]: http://i.imgur.com/P3YfQoD.png "facebook icon with padding"
