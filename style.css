@@ -45,7 +45,6 @@
   text-align: right;
 }
 
-
 .hadith-info {
   text-align: right;
 }
@@ -270,7 +269,7 @@ main {
   }
 }
 
-/*nav menu*/
+/* nav menu */
 .footer {
   position: fixed;
   left: 0;
@@ -328,7 +327,6 @@ main {
   .header h6 {
     font-size: 1rem;
   }
-
 }
 
 .main {
@@ -374,7 +372,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 4;
   border: 2px solid #38464b;
   border-radius: 10px;
   width: 100%;
