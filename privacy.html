@@ -1,173 +1,246 @@
-<html expr:dir='rtl' lang='ar' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b'
-  xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
-
-<head>
-  <title>سياسة الخصوصية</title>
-  <meta charset='UTF-8' />
-  <!--blog meta data -->
-  <meta expr:content='الباحث في الحديث' property='og:site_name' />
-  <meta content='website' property='og:type' />
-  <meta content='https://adelpro.github.io/check-hadith/images/256x256.png' property='og:image' />
-  <meta content='256' property='og:image:width' />
-  <meta content='256' property='og:image:height' />
-  <meta content='100001161316746' property='fb:admins' />
-  <meta content='https://www.facebook.com/adel.benyahia' property='article:author' />
-  <meta content='ar_AR' property='og:locale' />
-  <meta content='DZ' name='geo.region' />
-  <meta content='summary' name='twitter:card' />
-  <meta content='@adelpro' name='twitter:site' />
-  <meta content='@adelpro' name='twitter:creator' />
-  <meta expr:content='الباحث في الحديث' name='twitter:title' />
-  <meta
-    expr:content='
-    يمكنك الموقع من البحث عن الأحاديث النبوية والتحقق من صحتها إنطلاقا من كلمة أو جملة من الحديث حيث يستعين بقاعدة بيانات موقع درر '
-    name='description' />
-  <meta expr:content='https://www.quranipfs.com/images/256x256.png' name='twitter:image:src' />
-  <meta content='Algeria' name='geo.placename' />
-  <meta content='BENYAHIA adel' name='Author' />
-  <meta content='width=device-width, user-scalable=no' name='viewport' />
-  <meta content='الحديث النبوي الصحيح محمد رسول الله' name='keywords' />
-  <meta charset='UTF-8'>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href=".\style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- PWA metadata -->
-  <meta content='#000000' name='theme-color' />
-  <link href='./images/32x32.png' rel='icon' type='image/x-icon' />
-  <link href='./images/192x192.png' rel='icon' sizes='192x192' />
-  <link href='./images/32x32.png' rel='icon' sizes='32x32' type='image/png' />
-  <link href='./images/favicon.ico' rel='icon' sizes='16x16' type='mage/png' />
-  <link href='./images/32x32.png' rel='shortcut icon' sizes='32x32' type='image/x-icon' />
-  <link href='./manifest.json' rel='manifest' />
-  <!-- Add to home screen for Safari on iOS-->
-  <link href='./images/192x192.png' rel='apple-touch-icon' />
-  <link href='./images/512x512.png' rel='apple-touch-icon' />
-  <meta content='yes' name='apple-mobile-web-app-capable' />
-  <meta content='black-translucent' name='apple-mobile-web-app-status-bar-style' />
-  <meta content='Quranipfs' name='apple-mobile-web-app-title' />
-  <!-- Add to home screen for Windows-->
-  <meta content='./images/512x512.png' name='msapplication-TileImage' />
-  <meta content='#000000' name='msapplication-TileColor' />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap" rel="stylesheet" />
-  <script>
-    /*service worker registration */
-    function loadServiceWorker() {
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", function () {
-          navigator.serviceWorker
-            .register("/serviceWorker.js")
-            .then((res) => console.log("service worker registered"))
-            .catch((err) => console.log("service worker not registered", err));
-        });
+<html
+  expr:dir="rtl"
+  lang="ar"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:b="http://www.google.com/2005/gml/b"
+  xmlns:data="http://www.google.com/2005/gml/data"
+  xmlns:expr="http://www.google.com/2005/gml/expr"
+>
+  <head>
+    <title>سياسة الخصوصية</title>
+    <meta charset="UTF-8" />
+    <!--blog meta data -->
+    <meta expr:content="الباحث في الحديث" property="og:site_name" />
+    <meta content="website" property="og:type" />
+    <meta
+      content="https://adelpro.github.io/check-hadith/images/256x256.png"
+      property="og:image"
+    />
+    <meta content="256" property="og:image:width" />
+    <meta content="256" property="og:image:height" />
+    <meta content="100001161316746" property="fb:admins" />
+    <meta
+      content="https://www.facebook.com/adel.benyahia"
+      property="article:author"
+    />
+    <meta content="ar_AR" property="og:locale" />
+    <meta content="DZ" name="geo.region" />
+    <meta content="summary" name="twitter:card" />
+    <meta content="@adelpro" name="twitter:site" />
+    <meta content="@adelpro" name="twitter:creator" />
+    <meta expr:content="الباحث في الحديث" name="twitter:title" />
+    <meta
+      expr:content="
+    يمكنك الموقع من البحث عن الأحاديث النبوية والتحقق من صحتها إنطلاقا من كلمة أو جملة من الحديث حيث يستعين بقاعدة بيانات موقع درر "
+      name="description"
+    />
+    <meta
+      expr:content="https://www.quranipfs.com/images/256x256.png"
+      name="twitter:image:src"
+    />
+    <meta content="Algeria" name="geo.placename" />
+    <meta content="BENYAHIA adel" name="Author" />
+    <meta content="width=device-width, user-scalable=no" name="viewport" />
+    <meta content="الحديث النبوي الصحيح محمد رسول الله" name="keywords" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href=".\style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- PWA metadata -->
+    <meta content="#000000" name="theme-color" />
+    <link href="./images/32x32.png" rel="icon" type="image/x-icon" />
+    <link href="./images/192x192.png" rel="icon" sizes="192x192" />
+    <link href="./images/32x32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link
+      href="./images/favicon.ico"
+      rel="icon"
+      sizes="16x16"
+      type="mage/png"
+    />
+    <link
+      href="./images/32x32.png"
+      rel="shortcut icon"
+      sizes="32x32"
+      type="image/x-icon"
+    />
+    <link href="./manifest.json" rel="manifest" />
+    <!-- Add to home screen for Safari on iOS-->
+    <link href="./images/192x192.png" rel="apple-touch-icon" />
+    <link href="./images/512x512.png" rel="apple-touch-icon" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta
+      content="black-translucent"
+      name="apple-mobile-web-app-status-bar-style"
+    />
+    <meta content="Quranipfs" name="apple-mobile-web-app-title" />
+    <!-- Add to home screen for Windows-->
+    <meta content="./images/512x512.png" name="msapplication-TileImage" />
+    <meta content="#000000" name="msapplication-TileColor" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      /*service worker registration */
+      function loadServiceWorker() {
+        if ("serviceWorker" in navigator) {
+          window.addEventListener("load", function () {
+            navigator.serviceWorker
+              .register("/serviceWorker.js")
+              .then((res) => console.log("service worker registered"))
+              .catch((err) =>
+                console.log("service worker not registered", err)
+              );
+          });
+        }
       }
-    }
-    loadServiceWorker();
-  </script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RSXLH4V7G"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+      loadServiceWorker();
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-8RSXLH4V7G"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag('config', 'G-8RSXLH4V7G');
-  </script>
-</head>
+      gtag("config", "G-8RSXLH4V7G");
+    </script>
+  </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <button href="#navigation" class="nav-trigger" aria-haspopup="true" aria-controls="navigation" id="navigation-button">
-    Menu <span></span>
-  </button>
-  <nav class="nav-container" id="navigation">
-    <header>
-      <h2>الباحث في الحديث</h2>
+  <body itemscope itemtype="http://schema.org/WebPage">
+    <button
+      href="#navigation"
+      class="nav-trigger"
+      aria-haspopup="true"
+      aria-controls="navigation"
+      id="navigation-button"
+    >
+      Menu <span></span>
+    </button>
+    <nav class="nav-container" id="navigation">
+      <header>
+        <h2>الباحث في الحديث</h2>
+      </header>
+
+      <ul class="nav">
+        <li role="none">
+          <a href=".\index.html" role="menuitem" class="nav-link"
+            >الصفحة الرئيسية</a
+          >
+        </li>
+        <li role="none">
+          <a href=".\about-us.html" role="menuitem" class="nav-link"
+            >حول الموقع</a
+          >
+        </li>
+        <li role="none">
+          <a href=".\download.html" role="menuitem" class="nav-link"
+            >تطبيق الموقع</a
+          >
+        </li>
+        <li id="social">
+          <a class="smGlobalBtn" href="https://www.facebook.com/wathakker.wakf"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+          <a class="smGlobalBtn" href="https://twitter.com/adelpro"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a class="smGlobalBtn" href="https://m.me/wathakker.wakf"
+            ><i class="fa-brands fa-facebook-messenger"></i
+          ></a>
+          <a class="smGlobalBtn" href="https://www.t.me/wathakkerwakf"
+            ><i class="fab fa-telegram-plane"></i
+          ></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="overlay"></div>
+    <!-- improve main element 3d movement -->
+    <header
+      class="center header"
+      itemscope
+      itemtype="http://schema.org/WPHeader"
+    >
+      <img
+        src=".\images\256x256.png"
+        width="256"
+        height="265"
+        alt="checkhadith"
+        itemprop="image"
+      />
     </header>
+    <main class="main">
+      <section class="center" style="padding: 10px">
+        <h6>بسم الله الرحمن الرحيم</h6>
+        <p>
+          نقدر مخاوفكم واهتمامكم بشأن خصوصية بياناتكم على الشبكة العنكبوتية،
+          لذلك قمنا باعداد هذه الصفحة لشرح سياسة الموقع في التعامل مع بياناتكم
+          ولمساعدتكم في فهم طبيعة البيانات التي نجمعها عند زيارتكم لموقعنا على
+          شبكة الانترنت وكيفية تعاملنا مع هذه البيانات الشخصية.
+        </p>
+        <h6>التصفح</h6>
+        <p>
+          لم يتم تصميم الموقع من أجل جمع بياناتك الشخصية من جهاز الكمبيوتر الخاص
+          بك أو من جهاز الهاتف أو اللوحة الرقمية أثناء تصفحك، ولكن سيتم فقط
+          استخدام البيانات المقدمة من قبلك بمعرفتك ومحض إرادتك لتخصيص تصفحك
+          للموقع كمثال:عدد الزيارات.
+        </p>
+        <p>
+          نحن نستعين بشركة قوقل من أجل تحليل معلومات الزوار لتحسيين نوعية
+          الخدمات و تطوير الموقع
+        </p>
 
-    <ul class="nav">
-      <li role="none"><a href=".\index.html" role="menuitem">الصفحة الرئيسية</a></li>
-      <li role="none"><a href=".\about-us.html" role="menuitem">حول الموقع</a></li>
-      <li role="none"><a href=".\download.html" role="menuitem">تطبيق الموقع</a></li>
-      <li id="social">
-        <a class="smGlobalBtn facebookBtn" href="https://www.facebook.com/wathakker.wakf"><i
-            class="fa-brands fa-facebook-f"></i></a>
-        <a class="smGlobalBtn" href="https://twitter.com/adelpro"><i class="fa-brands fa-twitter"></i></a>
-        <a class="smGlobalBtn" href="https://m.me/wathakker.wakf"><i class="fa-brands fa-facebook-messenger"></i></a>
-        <a class="smGlobalBtn" href="https://www.t.me/wathakkerwakf"><i class="fab fa-telegram-plane"></i></a>
-      </li>
-    </ul>
-  </nav>
-  <div class="overlay"></div> <!-- improve main element 3d movement -->
-  <header class="center header" itemscope itemtype="http://schema.org/WPHeader">
-    <img src=".\images\256x256.png" width="256" height="265" class="img-responsive circle center" alt="checkhadith"
-      itemprop="image"></img>
+        <h6>الروابط للمواقع الأخرى على شبكة الإنترنت</h6>
 
-  </header>
-  <main class="main">
-    <section class="center" style="padding:10px;">
+        <p>
+          قد يشتمل موقعنا على روابط لمواقع أخرى على شبكة الإنترنت ولا نعتبر
+          مسؤولين بأي شكل من الأشكال عن أساليب تعامل هذه المواقع مع بياناتك
+        </p>
+        <h6>إفشاء المعلومات</h6>
+        <p>
+          نحافظ على سرية كل بيانات الخصوصية الشخصية التي نتحصل عليها، ولن يتم
+          كشفها إلا بموجب القانون, أو لحماية حقوق الملكية الخاصة بهذا الموقع أو
+          الجهات المسؤولة عنه، لن نقوم ببيع معلوماتك أو المتاجرة بها لأي طرف
+          ثالث خارج هذا الموقع
+        </p>
+        <h6>عند الاتصال بنا</h6>
+        <p>
+          عند مراسلتك لنا عبر صفحة (اتصل بنا) سيتم التعامل مع كافة البيانات
+          المقدمة من طرفك بسرية .و سيتم استخدام البيانات التي تقدمها في الرد على
+          كافة طلباتك
+        </p>
+        <h6>أخيرا</h6>
+        <p>نحتفظ بالحق في تعديل بنود وشروط سياسة الخصوصية</p>
+      </section>
+    </main>
+    <footer class="footer">
+      <span class="center"> الباحث في الحديث ©2021 </span>
+    </footer>
+    <script>
+      //Menu
+      var navTrigger = document.getElementsByClassName("nav-trigger")[0],
+        body = document.getElementsByTagName("body")[0];
 
-      <h6>بسم الله الرحمن الرحيم</h6>
-      </p>
-      نقدر مخاوفكم واهتمامكم بشأن خصوصية بياناتكم على الشبكة العنكبوتية، لذلك قمنا باعداد هذه الصفحة لشرح سياسة
-      الموقع في التعامل مع بياناتكم ولمساعدتكم في فهم طبيعة البيانات التي نجمعها عند زيارتكم لموقعنا على شبكة
-      الانترنت وكيفية تعاملنا مع هذه البيانات الشخصية.
-      </p>
-      <h6>التصفح</h6>
-      <p>
-        لم يتم تصميم الموقع من أجل جمع بياناتك الشخصية من جهاز الكمبيوتر الخاص بك أو من جهاز الهاتف أو اللوحة
-        الرقمية أثناء تصفحك، ولكن سيتم فقط استخدام البيانات المقدمة من قبلك بمعرفتك ومحض إرادتك لتخصيص تصفحك
-        للموقع كمثال:عدد الزيارات.
-      </p>
-      <p>
-        نحن نستعين بشركة قوقل من أجل تحليل معلومات الزوار لتحسيين نوعية الخدمات و تطوير الموقع
-      </p>
+      navTrigger.addEventListener("click", toggleNavigation);
 
-      <h6>الروابط للمواقع الأخرى على شبكة الإنترنت</h6>
-
-      <p>
-        قد يشتمل موقعنا على روابط لمواقع أخرى على شبكة الإنترنت ولا نعتبر مسؤولين بأي شكل من الأشكال عن أساليب
-        تعامل هذه المواقع مع بياناتك
-      </p>
-      <h6>إفشاء المعلومات</h6>
-      <p>
-        نحافظ على سرية كل بيانات الخصوصية الشخصية التي نتحصل عليها، ولن يتم كشفها إلا بموجب القانون, أو لحماية
-        حقوق الملكية الخاصة بهذا الموقع أو الجهات المسؤولة عنه، لن نقوم ببيع معلوماتك أو المتاجرة بها لأي طرف ثالث
-        خارج هذا الموقع
-      </p>
-      <h6>عند الاتصال بنا</h6>
-      <p>
-        عند مراسلتك لنا عبر صفحة (اتصل بنا) سيتم التعامل مع كافة البيانات المقدمة من طرفك بسرية .و سيتم استخدام
-        البيانات التي تقدمها في الرد على كافة طلباتك
-      </p>
-      <h6>أخيرا</h6>
-      <p>
-        نحتفظ بالحق في تعديل بنود وشروط سياسة الخصوصية</p>
-
-    </section>
-  </main>
-  <footer class="footer">
-    <span class="center">
-      الباحث في الحديث ©2021
-    </span>
-  </footer>
-  <script>
-    //Menu
-    var navTrigger = document.getElementsByClassName('nav-trigger')[0],
-      body = document.getElementsByTagName('body')[0];
-
-    navTrigger.addEventListener('click', toggleNavigation);
-
-    function toggleNavigation(event) {
-      event.preventDefault();
-      body.classList.toggle('nav-open');
-    }
-  </script>
-</body>
-
+      function toggleNavigation(event) {
+        event.preventDefault();
+        body.classList.toggle("nav-open");
+      }
+    </script>
+  </body>
 </html>

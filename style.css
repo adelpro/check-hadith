@@ -15,20 +15,19 @@
 
 /* global button class */
 .smGlobalBtn {
+  text-decoration: none;
+  transform: translateZ(0);
+  font-family: "Almarai", sans-serif;
+  font-size: 1.5rem;
+  padding: 0.7rem;
+  color: #1f2b3d;
   display: inline-block;
-  position: relative;
+  transition: ease-in-out 0.3s;
   cursor: pointer;
   width: 50px;
   height: 50px;
   border: 2px solid #ddd;
   box-shadow: 0 3px 3px #999;
-  padding: 0;
-  text-decoration: none;
-  text-align: center;
-  color: #fff;
-  font-size: 20px;
-  font-weight: normal;
-  line-height: 2em;
   border-radius: 27px;
   -moz-border-radius: 27px;
   -webkit-border-radius: 27px;
@@ -98,6 +97,7 @@ main {
 }
 
 .nav-trigger {
+  cursor: pointer;
   position: fixed;
   z-index: 4;
   top: 40px;
@@ -216,7 +216,7 @@ main {
   padding: 0;
 }
 
-.nav a {
+.nav-link {
   padding: 0.4em 0;
   font-weight: bold;
   text-decoration: none;
