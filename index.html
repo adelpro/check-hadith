@@ -111,22 +111,6 @@
       />
     </noscript>
     <!--Preload google font-->
-    <script>
-      /*service worker registration */
-      function loadServiceWorker() {
-        if ("serviceWorker" in navigator) {
-          window.addEventListener("load", function () {
-            navigator.serviceWorker
-              .register("./serviceWorker.js")
-              .then((res) => console.log("service worker registered"))
-              .catch((err) =>
-                console.log("service worker not registered", err)
-              );
-          });
-        }
-      }
-      loadServiceWorker();
-    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
@@ -336,34 +320,7 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-      // Remember XHMLHTTP requests are asynchronous!!
-      function getJSON(url, callback) {
-        let request = new XMLHttpRequest();
-        request.open("GET", url, true);
-        request.onload = function () {
-          if (request.status >= 200 && request.status < 400) {
-            // Success!
-            var data = JSON.parse(request.responseText);
-          } else {
-            console.log("error");
-            // We reached our target server, but it returned an error
-          }
-        };
-
-        request.onerror = function () {
-          // There was a connection error of some sort
-        };
-
-        request.send();
-      } // End of getJSON function
-      const apiURL = "https://dorar.net/dorar_api.json?skey=ل&callback=?";
-      getJSON(apiURL, function (data) {
-        console.log(data);
-      });
-    </script>
-    <script>
       //API load
-
       function hadithFetch() {
         $.getJSON(
           "https://dorar.net/dorar_api.json?skey=" +
@@ -375,37 +332,6 @@
           }
         );
       }
-
-      //Menu
-      var navTrigger = document.getElementsByClassName("nav-trigger")[0],
-        body = document.getElementsByTagName("body")[0];
-
-      navTrigger.addEventListener("click", toggleNavigation);
-
-      function toggleNavigation(event) {
-        event.preventDefault();
-        body.classList.toggle("nav-open");
-      }
-    </script>
-    <!--script to assign "enter" key press to bsearch button-->
-    <script>
-      const input = document.getElementById("skey");
-      // Execute a function when the user presses a key on the keyboard
-      input.addEventListener("keypress", function (event) {
-        // If the user presses the "Enter" key on the keyboard
-        if (event.key === "Enter") {
-          // Cancel the default action, if needed
-          event.preventDefault();
-          // Trigger the button element with a click
-          document.getElementById("bsearch").click();
-        }
-      });
-    </script>
-    <script>
-      // focus cursor on search input on load
-      window.onload = function () {
-        var input = document.getElementById("skey").focus();
-      };
     </script>
     <script src="./app.js" defer></script>
   </body>
