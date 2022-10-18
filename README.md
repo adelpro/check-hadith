@@ -3,11 +3,11 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/b580d3158ca8406b85d1d1be848eae44)](https://www.codacy.com/gh/adelpro/check-hadith/dashboard?utm_source=github.com&utm_medium=referral&utm_content=adelpro/check-hadith&utm_campaign=Badge_Grade)
 ![Visits](https://komarev.com/ghpvc/?username=adelpro&style=flat-squar&color=brightgreen)
 
-# Website موقع الأنترنات
+### Website موقع الأنترنات
 
 [adelpro.github.io/check-hadith](https://adelpro.github.io/check-hadith/index.html)
 
-# About us
+### About us
 
 ![Check-hadith](https://adelpro.github.io/check-hadith/images/256x256.webp)
 
@@ -15,18 +15,18 @@ Check hadith nabawi using dorar API.
 يمكنك الموقع من البحث عن الأحاديث النبوية والتحقق من صحتها إنطلاقا من كلمة
 أو جملة من الحديث
 
-# Contact us
+### Contact us
 
 [![twitter][1.1]][1]
 [![facebook][2.1]][2]
 [![github][3.1]][3]
 
-# Our applications
+### Our applications
 
 [![Google Play][4.1]][4]
 [![Microsoft Store][5.1]][5]
 
-# Support us ❤️
+### Support us ❤️
 
 [![Buymeacoffee](https://badgen.net/badge/icon/buymeacoffee?icon=buymeacoffee&label)](https://www.buymeacoffee.com/Adel.benyahia/)
 [![PayPal](https://badgen.net/badge/icon/PayPal?icon=https://simpleicons.now.sh/paypal/fff&label)](https://www.paypal.com/paypalme/adelbenyahia)
