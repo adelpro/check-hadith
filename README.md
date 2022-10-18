@@ -5,7 +5,7 @@
 
 ## Website موقع الأنترنات
 
-<a href="https://adelpro.github.io/check-hadith/index.html" target="_blank">adelpro.github.io/check-hadith</a>
+[adelpro.github.io/check-hadith](https://adelpro.github.io/check-hadith/index.html)
 
 ## About us
 
