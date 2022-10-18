@@ -53,13 +53,13 @@ window.onload = () => {
     }
   });
   /* lateral menu open on click */
-  const navTrigger = document.getElementById("navigation-button");
-  const body = document.getElementsByTagName("body")[0];
-  navTrigger.addEventListener("click", toggleNavigation);
   function toggleNavigation(event) {
     event.preventDefault();
     body.classList.toggle("nav-open");
   }
+  const navTrigger = document.getElementById("navigation-button");
+  const body = document.getElementsByTagName("body")[0];
+  navTrigger.addEventListener("click", toggleNavigation);
 
   /* append Dorar script on <head> */
   bsearch.addEventListener("click", (e) => {
