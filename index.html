@@ -323,5 +323,13 @@
       <span class="center"> الباحث في الحديث - الإصدار 2 ©2021</span>
     </footer>
     <script src="./app.js" defer></script>
+    <script>
+      // register ServiceWorker, remember to use absolute path!
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register("/check-hadith/serviceWorker.js", {
+          scope: "/check-hadith/",
+        });
+      }
+    </script>
   </body>
 </html>
