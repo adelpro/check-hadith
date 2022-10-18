@@ -1,13 +1,18 @@
 {
-  "background_color": "#ffffff",
-  "dir": "ltr",
-  "display": "standalone",
   "name": "checkhadith",
-  "orientation": "any",
   "scope": "/",
   "short_name": "checkhadith",
   "start_url": "/",
   "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "iarc_rating_id": "4030-bece-76ed401682f1",
+  "url": "./index.html",
+  "lang": "ar",
+  "dir": "rtl",
+  "display": "standalone",
+  "orientation": "any",
+  "description": "يتيح لك الموقع الاستماع للقرآن الكريم مباشرة من المتصفح دون تحميل وبنوعية صوت عالية",
+
   "icons": [
     {
       "src": "./images/16x16.webp",
@@ -84,10 +89,6 @@
     "education",
     "books"
   ],
-  "iarc_rating_id": "4030-bece-76ed401682f1",
-  "url": "./index.html",
-  "lang": "ar",
-  "description": "يتيح لك الموقع الاستماع للقرآن الكريم مباشرة من المتصفح دون تحميل وبنوعية صوت عالية",
   "screenshots": [
     {
       "src": "./screenshots/1440x290.webp",
