@@ -9,7 +9,7 @@
 
 ## About us
 
-![Check-hadith](https://adelpro.github.io/check-hadith/images/256x256.png)
+![Check-hadith](https://adelpro.github.io/check-hadith/images/256x256.webp)
 
 Check hadith nabawi using dorar API.
 
