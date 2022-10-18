@@ -1,12 +1,3 @@
-/*service worker registration */
-function loadServiceWorker() {
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", function () {
-      navigator.serviceWorker.register("./serviceWorker.js");
-    });
-  }
-}
-loadServiceWorker();
 /* api call by adding script Dorar to the <head> */
 function createScript(key) {
   const apiURL = `https://dorar.net/dorar_api.json?skey=${key}&callback=hadithFetch2`;

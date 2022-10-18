@@ -107,17 +107,6 @@
       />
     </noscript>
     <!--Preload google font-->
-    <script>
-      /*service worker registration */
-      function loadServiceWorker() {
-        if ("serviceWorker" in navigator) {
-          window.addEventListener("load", function () {
-            navigator.serviceWorker.register("/serviceWorker.js");
-          });
-        }
-      }
-      loadServiceWorker();
-    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
@@ -326,14 +315,21 @@
     </footer>
     <script>
       //Menu
-      var navTrigger = document.getElementsByClassName("nav-trigger")[0],
-        body = document.getElementsByTagName("body")[0];
-
-      navTrigger.addEventListener("click", toggleNavigation);
 
       function toggleNavigation(event) {
         event.preventDefault();
         body.classList.toggle("nav-open");
+      }
+      let navTrigger = document.getElementsByClassName("nav-trigger")[0],
+        body = document.getElementsByTagName("body")[0];
+      navTrigger.addEventListener("click", toggleNavigation);
+    </script>
+    <script>
+      // register ServiceWorker, remember to use absolute path!
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register("/check-hadith/serviceWorker.js", {
+          scope: "/check-hadith/",
+        });
       }
     </script>
   </body>
