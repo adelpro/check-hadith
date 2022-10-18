@@ -9,7 +9,7 @@ function loadServiceWorker() {
     });
   }
 }
-const test = () => {
+
 window.onload = () => {
   /* Loading serviceWorker */
   //loadServiceWorker();
