@@ -40,6 +40,8 @@ window.onload = () => {
   /* focus cursor on search input on load */
   const input = document.getElementById("skey");
   const bsearch = document.getElementById("bsearch");
+  const navTrigger = document.getElementById("navigation-button");
+  const body = document.getElementsByTagName("body")[0];
   input.focus();
   /* script to assign "enter" key press to bsearch button */
   // Execute a function when the user presses a key on the keyboard
@@ -57,8 +59,6 @@ window.onload = () => {
     event.preventDefault();
     body.classList.toggle("nav-open");
   }
-  const navTrigger = document.getElementById("navigation-button");
-  const body = document.getElementsByTagName("body")[0];
   navTrigger.addEventListener("click", toggleNavigation);
 
   /* append Dorar script on <head> */
