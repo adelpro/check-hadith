@@ -12,8 +12,8 @@
 ![Check-hadith](https://adelpro.github.io/check-hadith/images/256x256.webp)
 
 Check hadith nabawi using dorar API.
-
-يمكنك الموقع من البحث عن الأحاديث النبوية والتحقق من صحتها إنطلاقا من كلمة أو جملة من الحديث
+يمكنك الموقع من البحث عن الأحاديث النبوية والتحقق من صحتها إنطلاقا من كلمة
+أو جملة من الحديث
 
 ## Contact us
 
@@ -23,8 +23,8 @@ Check hadith nabawi using dorar API.
 
 ## Our applications
 
-<a href="https://play.google.com/store/apps/details?id=app.web.checkhadith.twa&amp;pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt="احصل عليه من Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/ar_badge_web_generic.png" style="width: 180px; height: 80px;"></a>
-<a target="_blank" rel="noopener" title="Microsoft Store" href="https://www.microsoft.com/store/apps/9NN5H6LV53DS?cid=storebadge&amp;ocid=badge"><img class="img-responsive" src="https://developer.microsoft.com/store/badges/images/Arabic_get_it_from_MS.png" alt="احصل عليه من Windows Store" style="width: 180px; height: 80px;"></a>
+<a href="https://play.google.com/store/apps/details?id=app.web.checkhadith.twa&amp;pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt="احصل عليه من Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/ar_badge_web_generic.png" style="width: 180px; height: 80px;"/></a>
+<a target="_blank" rel="noopener" title="Microsoft Store" href="https://www.microsoft.com/store/apps/9NN5H6LV53DS?cid=storebadge&amp;ocid=badge"><img class="img-responsive" src="https://developer.microsoft.com/store/badges/images/Arabic_get_it_from_MS.png" alt="احصل عليه من Windows Store" style="width: 180px; height: 80px;"/></a>
 
 ## Support us ❤️
 
