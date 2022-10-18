@@ -6,6 +6,7 @@ function loadServiceWorker() {
     });
   }
 }
+loadServiceWorker();
 /* api call by adding script Dorar to the <head> */
 function createScript(key) {
   const apiURL = `https://dorar.net/dorar_api.json?skey=${key}&callback=hadithFetch2`;
@@ -35,8 +36,6 @@ const hadithFetch2 = async (data) => {
   }
 };
 window.onload = () => {
-  /* Loading serviceWorker */
-  loadServiceWorker();
   /* focus cursor on search input on load */
   const input = document.getElementById("skey");
   const bsearch = document.getElementById("bsearch");
