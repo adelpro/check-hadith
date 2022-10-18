@@ -16,7 +16,7 @@ const assets = [
   "./images/256x256.png",
   "./images/512x512.png",
   "./images/monochrome.png",
-  "./images/192x192.png"
+  "./images/192x192.png",
 ];
 // cache size limit function
 const limitCacheSize = (name, size) => {
@@ -57,13 +57,12 @@ self.addEventListener("fetch", (evt) => {
       .then((cacheRes) => {
         return (
           cacheRes ||
-          fetch(evt.request).then((fetchRes) => {
-            return caches.open(dynamicCache).then((cache) => {
-              cache.put(evt.request.url, fetchRes.clone());
-              // check cached items size
-              limitCacheSize(dynamicCache, 30);
-              return fetchRes;
-            });
+          fetch(evt.request).then(async (fetchRes) => {
+            const cache = await caches.open(dynamicCache);
+            cache.put(evt.request.url, fetchRes.clone());
+            // check cached items size
+            limitCacheSize(dynamicCache, 30);
+            return fetchRes;
           })
         );
       })

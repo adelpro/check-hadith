@@ -1,3 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Almarai", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
 /*Social round */
 #social {
   margin: 20px 10px;
@@ -11,7 +20,8 @@
   cursor: pointer;
   width: 50px;
   height: 50px;
-  border: 2px solid #ddd; /* add border to the buttons */
+  border: 2px solid #ddd;
+  /* add border to the buttons */
   box-shadow: 0 3px 3px #999;
   padding: 0px;
   text-decoration: none;
@@ -26,22 +36,25 @@
 }
 
 /*Social round*/
-#skey {
-  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
-  border: 1px solid #413f3e;
-  border-radius: 10px;
-  text-align: right;
-  padding: 0px;
-  flex: 1;
-}
-#skey:hover {
-  border: none;
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  padding: 8px 10px;
+  vertical-align: middle;
+  font-size: 0.8em;
+  line-height: 0.8em;
 }
 
-#bsearch {
+.input-group input {
+  flex-grow: 1;
+  border: none;
   cursor: pointer;
-  border-radius: 5px;
   vertical-align: middle;
+}
+
+.input-group input:focus {
+  outline: none;
 }
 
 #dorar {
@@ -70,30 +83,6 @@
 .info-subtitle {
   color: rgb(155, 35, 61);
   text-decoration: underline;
-}
-
-h1 {
-  font-family: "Almarai", sans-serif;
-  font-size: 20px;
-  font-size: 5vw;
-}
-
-h3 {
-  font-size: 14px;
-  font-family: "Almarai", sans-serif;
-}
-
-h2 {
-  font-size: 14px;
-  font-family: "Almarai", sans-serif;
-}
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Ubuntu", sans-serif;
-  text-decoration: none;
-  list-style: none;
-  box-sizing: border-box;
 }
 
 .inner-width {
@@ -215,6 +204,7 @@ p {
 .navigation-menu.active li:nth-child(5) a {
   transition-delay: 1s;
 }
+
 /*nav menu */
 *,
 *::after,
@@ -337,7 +327,7 @@ main {
   right: 0;
   height: 100%;
   width: 90%;
-  max-width: 460px;
+  max-width: 350px;
   padding: 2em 3.5em;
   background: #f3f3f3;
   overflow: auto;
@@ -370,10 +360,11 @@ main {
   text-decoration: none;
   color: #1f2b3d;
   transform: translateZ(0);
-  font-size: 7vw;
+  font-size: 2rem;
   font-family: "Almarai", sans-serif;
   display: inline-block;
 }
+
 @media screen and (min-width: 1200px) {
   .nav a {
     font-size: 40px;
@@ -411,6 +402,7 @@ main {
     transform: translateX(0);
   }
 }
+
 /*nav menu*/
 .footer {
   position: fixed;
@@ -420,4 +412,29 @@ main {
   background-color: #aaaaaa;
   color: white;
   text-align: center;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  margin-top: 100px;
+}
+
+.header h1 {
+  text-align: center;
+  font-size: 4rem;
+  margin: 10px;
+  padding: 10px;
+}
+
+@media screen .header h6 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 5px;
+  padding: 5px;
 }
