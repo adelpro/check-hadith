@@ -34,15 +34,15 @@
 }
 
 /* Social round */
-#dorar {
+.dorar {
   padding: 5px;
   text-align: right;
   width: fit-content;
   height: fit-content;
 }
 
-.hadith {
-  text-align: right;
+.dorar a {
+  display: none;
 }
 
 .hadith-info {
@@ -122,7 +122,7 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: background 0.3s;
+
 }
 
 .nav-trigger span::before,
@@ -130,7 +130,6 @@ main {
   content: "";
   top: 0;
   left: 0;
-  transition: background 0.3s, transform 0.3s;
 }
 
 .nav-trigger span::before {
@@ -278,6 +277,7 @@ main {
   background-color: #aaa;
   color: white;
   text-align: center;
+  font-size: small;
 }
 
 .center {
@@ -410,3 +410,32 @@ main {
   justify-content: center;
   align-items: center;
 }
+
+/* loader css */
+.loader-hide {
+  display: none;
+}
+
+.loader {
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(255, 255, 255, .3);
+  border-radius: 50%;
+  border-top-color: #1f2b3d;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+/* Loader css */

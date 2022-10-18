@@ -1,5 +1,5 @@
-const staticCache = "Checkhadith-cache-v8";
-const dynamicCache = "Checkhadith-dynamic-v8";
+const staticCache = "Checkhadith-cache-v9";
+const dynamicCache = "Checkhadith-dynamic-v9";
 const assets = [
   "/",
   "./index.html",
@@ -19,10 +19,7 @@ const assets = [
   "./images/256x256.webp",
   "./images/512x512.webp",
   "./images/192x192.webp",
-  "https://code.jquery.com/jquery-3.6.0.min.js",
   "https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap",
-  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/webfonts/fa-brands-400.woff2",
-  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css",
 ];
 // cache size limit function
 const limitCacheSize = (name, size) => {

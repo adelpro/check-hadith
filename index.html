@@ -296,7 +296,7 @@
         </h6>
       </div>
     </header>
-    <filter class="center">
+    <filter class="center" style="padding: 5px">
       <div class="search" dir="rtl">
         <input
           type="text"
@@ -305,34 +305,22 @@
           autocomplete="off"
           aria-label="Search"
         />
-        <button id="bsearch" onclick="hadithFetch()">⌕</button>
+
+        <button id="bsearch">⌕</button>
+        <!--onclick="hadithFetch()"-->
       </div>
     </filter>
     <main>
       <section class="intro">
         <main>
-          <div id="dorar" aria-live="polite"></div>
+          <div id="loader" class="loader-hide"><div class="loader"></div></div>
+          <div id="dorar" aria-live="polite" class="dorar"></div>
         </main>
       </section>
     </main>
     <footer class="footer">
-      <span class="center"> الباحث في الحديث ©2021 </span>
+      <span class="center"> الباحث في الحديث - الإصدار 2 ©2021</span>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      //API load
-      function hadithFetch() {
-        $.getJSON(
-          "https://dorar.net/dorar_api.json?skey=" +
-            $("#skey").val() +
-            "&callback=?",
-          function (data) {
-            $("#dorar").html("");
-            $("#dorar").html(data.ahadith.result);
-          }
-        );
-      }
-    </script>
     <script src="./app.js" defer></script>
   </body>
 </html>

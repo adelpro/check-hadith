@@ -9,10 +9,37 @@ function loadServiceWorker() {
     });
   }
 }
+/* api call by adding script Dorar to the <head> */
+function createScript(key) {
+  const apiURL = `https://dorar.net/dorar_api.json?skey=${key}&callback=hadithFetch2`;
+  let scriptElement = document.createElement("script");
+  scriptElement.setAttribute("src", apiURL);
+  scriptElement.setAttribute("id", "jsonp");
+  const oldScriptElement = document.getElementById("jsonp");
+  const head = document.getElementsByTagName("head")[0];
 
+  if (!oldScriptElement) {
+    //if there is no script element in <head> then create new one
+    head.appendChild(scriptElement);
+  } else {
+    head.replaceChild(scriptElement, oldScriptElement);
+  }
+}
+const hadithFetch2 = async (data) => {
+  let dorar = document.getElementById("dorar");
+  let loader = document.getElementById("loader");
+  const t = await data?.ahadith?.result;
+  if (t) {
+    loader.className = "loader-hide";
+    dorar.innerHTML = t;
+  } else {
+    dorar.innerHTML = "";
+    loader.className = "center";
+  }
+};
 window.onload = () => {
   /* Loading serviceWorker */
-  //loadServiceWorker();
+  loadServiceWorker();
   /* focus cursor on search input on load */
   const input = document.getElementById("skey");
   const bsearch = document.getElementById("bsearch");
@@ -36,4 +63,11 @@ window.onload = () => {
     event.preventDefault();
     body.classList.toggle("nav-open");
   }
+
+  /* append Dorar script on <head> */
+  bsearch.addEventListener("click", (e) => {
+    e.preventDefault();
+    createScript(skey.value);
+    hadithFetch2();
+  });
 };
