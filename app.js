@@ -64,7 +64,7 @@ window.onload = () => {
   /* append Dorar script on <head> */
   bsearch.addEventListener("click", (e) => {
     e.preventDefault();
-    createScript(skey.value);
+    createScript(input.value);
     hadithFetch2();
   });
 };
