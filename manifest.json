@@ -1,9 +1,8 @@
 {
   "name": "checkhadith",
-  "scope": "/",
   "id": "dkhholmfejenommjhxcdpmffkajgacc",
   "short_name": "checkhadith",
-  "start_url": "/",
+  "start_url": "/check-hadith/",
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
   "iarc_rating_id": "4030-bece-76ed401682f1",
