@@ -7,73 +7,46 @@
   box-sizing: border-box;
 }
 
-/*Social round */
+/* Social round */
 #social {
   margin: 20px 10px;
   text-align: center;
 }
 
+/* global button class */
 .smGlobalBtn {
-  /* global button class */
+  text-decoration: none;
+  transform: translateZ(0);
+  font-family: "Almarai", sans-serif;
+  font-size: 1.5rem;
+  padding: 0.7rem;
+  color: #1f2b3d;
   display: inline-block;
-  position: relative;
+  transition: ease-in-out 0.3s;
   cursor: pointer;
   width: 50px;
   height: 50px;
   border: 2px solid #ddd;
-  /* add border to the buttons */
   box-shadow: 0 3px 3px #999;
-  padding: 0px;
-  text-decoration: none;
-  text-align: center;
-  color: #fff;
-  font-size: 20px !important;
-  font-weight: normal;
-  line-height: 2em;
   border-radius: 27px;
   -moz-border-radius: 27px;
   -webkit-border-radius: 27px;
 }
 
-/*Social round*/
-
-.input-group {
-  display: flex;
-  flex-direction: row;
-  padding: 8px 10px;
-  vertical-align: middle;
-  font-size: 0.8em;
-  line-height: 0.8em;
-}
-
-.input-group input {
-  flex-grow: 1;
-  border: none;
-  cursor: pointer;
-  vertical-align: middle;
-}
-
-.input-group input:focus {
-  outline: none;
-}
-
+/* Social round */
 #dorar {
   padding: 5px;
-  text-align: right !important;
+  text-align: right;
   width: fit-content;
   height: fit-content;
 }
 
 .hadith {
-  text-align: right !important;
-}
-
-.hadith {
-  text-align: right !important;
+  text-align: right;
 }
 
 .hadith-info {
-  text-align: right !important;
+  text-align: right;
 }
 
 .search-keys {
@@ -94,118 +67,7 @@
   margin: auto;
 }
 
-.menu-icon {
-  width: 50px;
-  height: 50px;
-  background: #2c3a47;
-  color: #fff;
-  text-align: center;
-  line-height: 50px;
-  font-size: 20px;
-  z-index: 2;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 0.2s linear;
-}
-
-.menu-icon:hover {
-  opacity: 0.9;
-  transform: scale(1.1);
-}
-
-.navigation-menu {
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background: #2c3a47;
-  top: 0;
-  right: -100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.6s;
-}
-
-.navigation-menu nav {
-  display: grid;
-}
-
-.navigation-menu li {
-  margin: 20px 0;
-  overflow: hidden;
-  direction: rtl;
-}
-
-.navigation-menu a {
-  color: #fff;
-  font-size: 40px;
-  font-weight: 700;
-  position: relative;
-  display: inline-block;
-  transform: translateY(40px);
-}
-
-.navigation-menu a::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 15px;
-  background: #fd7474;
-  bottom: 0;
-  left: 0;
-  border-radius: 15px;
-  z-index: -1;
-  transition: 0.2s linear;
-}
-
-.navigation-menu a:hover::before {
-  width: 100%;
-}
-
-p {
-  max-width: 80%;
-  margin: auto;
-  padding: 40px 0;
-  font-size: 18px;
-  line-height: 1.4em;
-  text-align: justify;
-}
-
-.menu-icon.active {
-  background: #f1f1f1;
-  color: #2c3a47;
-}
-
-.navigation-menu.active {
-  right: 0;
-}
-
-.navigation-menu.active a {
-  transform: translateY(0);
-  transition: 0.6s linear;
-}
-
-.navigation-menu.active li:nth-child(1) a {
-  transition-delay: 0.2s;
-}
-
-.navigation-menu.active li:nth-child(2) a {
-  transition-delay: 0.4s;
-}
-
-.navigation-menu.active li:nth-child(3) a {
-  transition-delay: 0.6s;
-}
-
-.navigation-menu.active li:nth-child(4) a {
-  transition-delay: 0.8s;
-}
-
-.navigation-menu.active li:nth-child(5) a {
-  transition-delay: 1s;
-}
-
-/*nav menu */
+/* nav menu */
 *,
 *::after,
 *::before {
@@ -217,7 +79,7 @@ main {
   z-index: 1;
   height: 100vh;
   overflow: auto;
-  box-shadow: 0 0 50px #ffffff;
+  box-shadow: 0 0 50px #fff;
   transition: transform 0.5s;
   direction: rtl;
 }
@@ -227,20 +89,20 @@ main {
 }
 
 .intro {
-  height: 100vh+10px;
+  height: 100vh;
   width: 100%;
   display: table;
   background-size: cover;
 }
 
 .nav-trigger {
+  cursor: pointer;
   position: fixed;
   z-index: 4;
   top: 40px;
   right: 40px;
   height: 44px;
   width: 44px;
-
   overflow: hidden;
   color: transparent;
   white-space: nowrap;
@@ -342,11 +204,10 @@ main {
 }
 
 .nav-container h2 {
-  font-size: 15px;
+  font-size: 1.2rem;
   font-weight: bold;
-  text-transform: uppercase;
-  color: #aaaaaa;
-  margin: 1.5em 0;
+  color: #aaa;
+  margin: 2em 0;
 }
 
 .nav {
@@ -354,7 +215,7 @@ main {
   padding: 0;
 }
 
-.nav a {
+.nav-link {
   padding: 0.4em 0;
   font-weight: bold;
   text-decoration: none;
@@ -363,11 +224,16 @@ main {
   font-size: 2rem;
   font-family: "Almarai", sans-serif;
   display: inline-block;
+  transition: ease-in-out 0.3s;
+}
+
+.nav a:hover {
+  transform: scale(1.1);
 }
 
 @media screen and (min-width: 1200px) {
   .nav a {
-    font-size: 40px;
+    font-size: 1.5rem;
   }
 }
 
@@ -403,13 +269,13 @@ main {
   }
 }
 
-/*nav menu*/
+/* nav menu */
 .footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #aaaaaa;
+  background-color: #aaa;
   color: white;
   text-align: center;
 }
@@ -421,8 +287,22 @@ main {
   align-items: center;
 }
 
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.flex img {
+  width: 180px;
+  height: 80px;
+}
+
 .header {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .header h1 {
@@ -432,9 +312,101 @@ main {
   padding: 10px;
 }
 
-@media screen .header h6 {
+.header h6 {
   text-align: center;
   font-size: 1.2rem;
   margin: 5px;
   padding: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .header h6 {
+    font-size: 1rem;
+  }
+}
+
+.main {
+  margin: 0;
+}
+
+.main h1 {
+  text-align: center;
+  font-size: 4rem;
+  margin: 10px;
+  padding: 10px;
+}
+
+.main h6 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 5px;
+  padding: 5px;
+}
+
+.main p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 5px;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .main h1 {
+    font-size: 2.5rem;
+  }
+
+  .main h6 {
+    font-size: 1.5rem;
+  }
+
+  .main p {
+    font-size: 1.2rem;
+  }
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #38464b;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  height: 40px;
+  margin: 10px;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 2px;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  font-size: 1.2rem;
+}
+
+.search input::placeholder {
+  padding-right: 10px;
+}
+
+.search button {
+  position: absolute;
+  cursor: pointer;
+  border: none;
+  left: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #ffff;
+  height: 100%;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

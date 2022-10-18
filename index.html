@@ -56,10 +56,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!--<link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />-->
     <!-- PWA metadata -->
     <meta content="#000000" name="theme-color" />
     <link href="./images/32x32.png" rel="icon" type="image/x-icon" />
@@ -97,7 +93,7 @@
       rel="stylesheet"
     />
     <script>
-      /*service worker registration 
+      /*service worker registration */
       function loadServiceWorker() {
         if ("serviceWorker" in navigator) {
           window.addEventListener("load", function () {
@@ -110,7 +106,7 @@
           });
         }
       }
-      loadServiceWorker();*/
+      loadServiceWorker();
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -132,19 +128,44 @@
   </head>
 
   <body itemscope itemtype="http://schema.org/WebPage">
-    <a href="#navigation" class="nav-trigger"> Menu <span></span> </a>
-    <nav class="nav-container" id="navigation">
+    <button
+      href="#navigation"
+      class="nav-trigger"
+      aria-haspopup="true"
+      aria-controls="navigation"
+      id="navigation-button"
+    >
+      Menu <span></span>
+    </button>
+    <nav
+      class="nav-container"
+      id="navigation"
+      role="menu"
+      aria-labelledby="navigation-button"
+    >
       <header>
         <h2>الباحث في الحديث</h2>
       </header>
 
       <ul class="nav">
-        <li><a href="./about-us.html">حول الموقع</a></li>
-        <li><a href="./privacy.html">سياسة الخصوصية</a></li>
-        <li><a href="./download.html">تطبيق الموقع</a></li>
+        <li role="none">
+          <a href="./about-us.html" role="menuitem" class="nav-link"
+            >حول الموقع</a
+          >
+        </li>
+        <li role="none">
+          <a href="./privacy.html" role="menuitem" class="nav-link"
+            >سياسة الخصوصية</a
+          >
+        </li>
+        <li role="none">
+          <a href="./download.html" role="menuitem" class="nav-link"
+            >تطبيق الموقع</a
+          >
+        </li>
         <li id="social">
           <a
-            class="smGlobalBtn facebookBtn"
+            class="smGlobalBtn"
             href="https://www.facebook.com/wathakker.wakf"
             target="_blanc"
             ><i class="fa-brands fa-facebook-f"></i
@@ -178,13 +199,13 @@
       class="center header"
     >
       <img
-        src="./images/192x192.png"
-        width="192"
-        height="192"
+        src="./images/256x256.png"
+        width="256"
+        height="256"
         alt="الباحث في الحديث"
         itemprop="image"
       />
-      <div class="center">
+      <div>
         <h1 itemprop="name">الباحث في الحديث</h1>
         <h6>
           يمكنك الموقع من البحث عن الأحاديث النبوية والتحقق من صحتها إنطلاقا من
@@ -192,22 +213,22 @@
         </h6>
       </div>
     </header>
-    <filter>
-      <div class="center" dir="rtl">
-        <input type="text" placeholder="...بحث" id="skey" autocomplete="off" />
-        <button
-          id="bsearch"
-          class="waves-effect waves-light btn-small"
-          onclick="check_hadith()"
-        >
-          ⌕ بحث
-        </button>
+    <filter class="center">
+      <div class="search" dir="rtl">
+        <input
+          type="text"
+          placeholder="بحث..."
+          id="skey"
+          autocomplete="off"
+          aria-label="Search"
+        />
+        <button id="bsearch" onclick="hadithFetch()">⌕</button>
       </div>
     </filter>
     <main>
       <section class="intro">
         <main>
-          <div id="dorar" class="right"></div>
+          <div id="dorar" aria-live="polite"></div>
         </main>
       </section>
     </main>
@@ -215,21 +236,21 @@
       <span class="center"> الباحث في الحديث ©2021 </span>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
       //API load
-      function check_hadith() {
+
+      function hadithFetch() {
         $.getJSON(
           "https://dorar.net/dorar_api.json?skey=" +
             $("#skey").val() +
             "&callback=?",
           function (data) {
-            console.log(data.ahadith.result);
             $("#dorar").html("");
             $("#dorar").html(data.ahadith.result);
           }
         );
       }
+
       //Menu
       var navTrigger = document.getElementsByClassName("nav-trigger")[0],
         body = document.getElementsByTagName("body")[0];
@@ -240,6 +261,20 @@
         event.preventDefault();
         body.classList.toggle("nav-open");
       }
+    </script>
+    <!--script to assign "enter" key press to bsearch button-->
+    <script>
+      const input = document.getElementById("skey");
+      // Execute a function when the user presses a key on the keyboard
+      input.addEventListener("keypress", function (event) {
+        // If the user presses the "Enter" key on the keyboard
+        if (event.key === "Enter") {
+          // Cancel the default action, if needed
+          event.preventDefault();
+          // Trigger the button element with a click
+          document.getElementById("bsearch").click();
+        }
+      });
     </script>
   </body>
 </html>
