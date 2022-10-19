@@ -1,10 +1,10 @@
-const staticCache = "Checkhadith-cache-v12";
-const dynamicCache = "Checkhadith-dynamic-v12";
+const staticCache = "Checkhadith-cache-v13";
+const dynamicCache = "Checkhadith-dynamic-v13";
 const assets = [
   "/",
   "./index.html",
   "./download.html",
-  "./about.html",
+  "./about-us.html",
   "./privacy.html",
   "./fallback.html",
   "./style.css",
@@ -19,7 +19,6 @@ const assets = [
   "./images/256x256.webp",
   "./images/512x512.webp",
   "./images/192x192.webp",
-
   "https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap",
 ];
 
@@ -38,7 +37,7 @@ const limitCacheSize = (name, size) => {
 self.addEventListener("install", (installEvent) => {
   installEvent.waitUntil(
     caches.open(staticCache).then((cache) => {
-      cache.addAll(assets);
+      if (cache) cache.addAll(assets);
     })
   );
 });
