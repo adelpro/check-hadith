@@ -1,5 +1,5 @@
-const staticCache = "Checkhadith-cache-v11";
-const dynamicCache = "Checkhadith-dynamic-v11";
+const staticCache = "Checkhadith-cache-v12";
+const dynamicCache = "Checkhadith-dynamic-v12";
 const assets = [
   "/",
   "./index.html",
@@ -22,6 +22,7 @@ const assets = [
 
   "https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap",
 ];
+
 // cache size limit function
 const limitCacheSize = (name, size) => {
   caches.open(name).then((cache) => {
@@ -33,10 +34,11 @@ const limitCacheSize = (name, size) => {
   });
 };
 
-self.addEventListener("install", (event) => {
-  event.waitUntil(
+//install event
+self.addEventListener("install", (installEvent) => {
+  installEvent.waitUntil(
     caches.open(staticCache).then((cache) => {
-      return cache?.addAll(assets);
+      cache.addAll(assets);
     })
   );
 });
@@ -53,6 +55,7 @@ self.addEventListener("activate", (evt) => {
     })
   );
 });
+
 // fetch event
 self.addEventListener("fetch", (evt) => {
   evt.respondWith(
@@ -61,12 +64,13 @@ self.addEventListener("fetch", (evt) => {
       .then((cacheRes) => {
         return (
           cacheRes ||
-          fetch(evt.request).then(async (fetchRes) => {
-            const cache = await caches.open(dynamicCache);
-            cache.put(evt.request.url, fetchRes.clone());
-            // check cached items size
-            limitCacheSize(dynamicCache, 30);
-            return fetchRes;
+          fetch(evt.request).then((fetchRes) => {
+            return caches.open(dynamicCache).then((cache) => {
+              cache.put(evt.request.url, fetchRes.clone());
+              // check cached items size
+              limitCacheSize(dynamicCache, 30);
+              return fetchRes;
+            });
           })
         );
       })

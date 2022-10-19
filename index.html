@@ -324,12 +324,20 @@
     </footer>
     <script src="./app.js" defer></script>
     <script>
-      // register ServiceWorker, remember to use absolute path!
-      if (navigator.serviceWorker) {
-        navigator.serviceWorker.register("/check-hadith/serviceWorker.js", {
-          scope: "./",
-        });
+      /*service worker registration */
+      function loadServiceWorker() {
+        if ("serviceWorker" in navigator) {
+          window.addEventListener("load", function () {
+            navigator.serviceWorker
+              .register("/serviceWorker.js", { scope: "/check-hadith/" })
+              .then((res) => console.log("service worker registered"))
+              .catch((err) =>
+                console.log("service worker not registered", err)
+              );
+          });
+        }
       }
+      loadServiceWorker();
     </script>
   </body>
 </html>
