@@ -410,6 +410,7 @@ main {
   font-weight: bold;
   background-color: #ffff;
   height: 100%;
+  width: 100%;
   margin: 5px;
   display: flex;
   justify-content: center;
