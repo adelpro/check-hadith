@@ -137,34 +137,32 @@
   </head>
 
   <body itemscope itemtype="http://schema.org/WebPage">
+    <nav
+      class="nav-container"
+      id="navigation"
+     aria-labelledby="navigation-button"
+     aria-label="Main navigation"
+      role="navigation"
+    >
     <button
       href="#navigation"
       class="nav-trigger"
-      aria-haspopup="true"
+      aria-controls="navigation-menu"
       aria-expanded="false"
-      aria-label="Navigation Button"
-      aria-controls="navigation"
+      aria-haspopup="true"      
       id="navigation-button"
     >
       Menu <span></span>
     </button>
-    <nav
-      class="nav-container"
-      id="navigation"
-      role="menu"
-      aria-labelledby="navigation-button"
-      aria-label="Navigation Main"
-      role="navigation"
-    >
-      <header style="background-color: rgb(87, 84, 84)">
+      <header style="border: 1px solid rgb(87, 84, 84);">
         <h2>الباحث في الحديث</h2>
       </header>
-      <ul class="nav">
+      <ul class="nav" id="navigation-menu">
         <li role="none" itemprop="name">
           <a
             itemprop="url"
             href="#"
-            role="menuitem"
+            aria-current="page"
             class="nav-link active-link"
             >الصفحة الرئيسية</a
           >
