@@ -308,19 +308,22 @@
       itemtype="http://schema.org/WPHeader"
       class="center header"
     >
-      <img
-        srcset="
-          ./images/150x150.webp 150w,
-          ./images/256x256.webp 256w,
-          ./images/512x512.webp 512w,
-          ./images/800x800.webp 800w
-        "
-        src="./images/256x256.webp"
-        width="256"
-        height="265"
-        alt="check-hadith"
-        itemprop="image"
-      />
+      <div style="width: 256px; height: 265px">
+        <img
+          srcset="
+            ./images/90x90.webp    90w,
+            ./images/128x128.webp 128w,
+            ./images/192x192.webp 192w,
+            ./images/256x256.webp 256w,
+            ./images/512x512.webp 512w,
+            ./images/800x800.webp 800w
+          "
+          style="width: 100%; height: auto"
+          src="./images/256x256.webp"
+          alt="check-hadith"
+          itemprop="image"
+        />
+      </div>
       <div>
         <h1 itemprop="name">الباحث في الحديث</h1>
         <h2>
@@ -338,7 +341,6 @@
           autocomplete="off"
           aria-label="Search"
         />
-
         <button id="bsearch">⌕</button>
       </div>
     </filter>
