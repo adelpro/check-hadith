@@ -1,5 +1,5 @@
-const staticCache = "Checkhadith-cache-v10";
-const dynamicCache = "Checkhadith-dynamic-v10";
+const staticCache = "Checkhadith-cache-v11";
+const dynamicCache = "Checkhadith-dynamic-v11";
 const assets = [
   "/",
   "./index.html",
@@ -19,6 +19,7 @@ const assets = [
   "./images/256x256.webp",
   "./images/512x512.webp",
   "./images/192x192.webp",
+
   "https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap",
 ];
 // cache size limit function

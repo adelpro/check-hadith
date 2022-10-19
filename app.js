@@ -18,9 +18,9 @@ const hadithFetch2 = async (data) => {
   let dorar = document.getElementById("dorar");
   let loader = document.getElementById("loader");
   const t = await data?.ahadith?.result;
-  if (t) {
+  if (t && dorar && loader) {
     loader.className = "loader-hide";
-    dorar.innerHTML`${t}`;
+    dorar.innerHTML = `${t}`;
   } else {
     dorar.innerHTML = "";
     loader.className = "center";
@@ -28,10 +28,10 @@ const hadithFetch2 = async (data) => {
 };
 window.onload = () => {
   /* focus cursor on search input on load */
-  const input = document.getElementById("skey");
-  const bsearch = document.getElementById("bsearch");
-  const navTrigger = document.getElementById("navigation-button");
-  const body = document.getElementsByTagName("body")[0];
+  let input = document.getElementById("skey");
+  let bsearch = document.getElementById("bsearch");
+  let navTrigger = document.getElementById("navigation-button");
+  let body = document.getElementsByTagName("body")[0];
   input.focus();
   /* script to assign "enter" key press to bsearch button */
   // Execute a function when the user presses a key on the keyboard
@@ -55,6 +55,6 @@ window.onload = () => {
   bsearch.addEventListener("click", (e) => {
     e.preventDefault();
     createScript(input.value);
-    hadithFetch2();
+    hadithFetch2(dorar, loader);
   });
 };
