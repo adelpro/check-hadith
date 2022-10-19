@@ -48,6 +48,7 @@ window.onload = () => {
   function toggleNavigation(event) {
     event.preventDefault();
     body.classList.toggle("nav-open");
+    navTrigger.toggleAttribute("aria-expanded");
   }
   navTrigger.addEventListener("click", toggleNavigation);
 
