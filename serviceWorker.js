@@ -18,7 +18,6 @@ const assets = [
   "./images/192x192.webp",
   "./images/256x256.webp",
   "./images/512x512.webp",
-  "./images/192x192.webp",
   "https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap",
 ];
 

@@ -286,6 +286,12 @@ main {
   align-items: center;
 }
 
+.active-link {
+  border-top: 2px solid #7786c4;
+  border-bottom: 2px solid #7786c4;
+  width: 100%;
+}
+
 .flex {
   display: flex;
   flex-direction: row;
@@ -435,4 +441,11 @@ main {
   to {
     -webkit-transform: rotate(360deg);
   }
+}
+
+/* loader css */
+.horizontal-spacing {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 100%;
 }

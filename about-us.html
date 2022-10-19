@@ -143,23 +143,50 @@
       <header>
         <h2>الباحث في الحديث</h2>
       </header>
-
       <ul class="nav">
-        <li role="none">
-          <a href=".\index.html" role="menuitem" class="nav-link"
+        <li role="none" itemprop="name">
+          <a itemprop="url" href=".\index.html" role="menuitem" class="nav-link"
             >الصفحة الرئيسية</a
           >
         </li>
-        <li role="none">
-          <a href=".\privacy.html" role="menuitem" class="nav-link"
-            >سياسة الخصوصية</a
-          >
-        </li>
-        <li role="none">
-          <a href=".\privacy.html" role="menuitem" class="nav-link"
+
+        <li role="none" itemprop="name">
+          <a
+            itemprop="url"
+            href=".\download.html"
+            role="menuitem"
+            class="nav-link"
             >تطبيق الموقع</a
           >
         </li>
+        <li role="none" itemprop="name">
+          <a
+            itemprop="url"
+            href="#"
+            role="menuitem"
+            class="nav-link active-link"
+            >حول الموقع</a
+          >
+        </li>
+        <li role="none" itemprop="name">
+          <a
+            itemprop="url"
+            href=".\contact-us.html"
+            role="menuitem"
+            class="nav-link"
+            >إتصل بنا</a
+          >
+        </li>
+        <li role="none" itemprop="name">
+          <a
+            itemprop="url"
+            href=".\privacy.html"
+            role="menuitem"
+            class="nav-link"
+            >سياسة الخصوصية</a
+          >
+        </li>
+
         <li id="social">
           <a
             class="smGlobalBtn"
@@ -299,12 +326,17 @@
       navTrigger.addEventListener("click", toggleNavigation);
     </script>
     <script>
-      // register ServiceWorker, remember to use absolute path!
-      if (navigator.serviceWorker) {
-        navigator.serviceWorker.register("/check-hadith/serviceWorker.js", {
-          scope: "/check-hadith/",
-        });
+      /*service worker registration with scope*/
+      function loadServiceWorker() {
+        if ("serviceWorker" in navigator) {
+          window.addEventListener("load", function () {
+            navigator.serviceWorker.register("./serviceWorker.js", {
+              scope: "./",
+            });
+          });
+        }
       }
+      loadServiceWorker();
     </script>
   </body>
 </html>

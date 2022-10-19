@@ -7,8 +7,8 @@
   xmlns:expr="http://www.google.com/2005/gml/expr"
 >
   <head>
-    <title>سياسة الخصوصية</title>
     <meta charset="UTF-8" />
+    <title>إتصل بنا</title>
     <!--blog meta data -->
     <meta expr:content="الباحث في الحديث" property="og:site_name" />
     <meta content="website" property="og:type" />
@@ -24,7 +24,7 @@
       property="article:author"
     />
     <meta content="ar_AR" property="og:locale" />
-    <meta content="DZ" name="geo.region" />
+    <meta content="DZ" name="geo.region/" />
     <meta content="summary" name="twitter:card" />
     <meta content="@adelpro" name="twitter:site" />
     <meta content="@adelpro" name="twitter:creator" />
@@ -35,7 +35,7 @@
       name="description"
     />
     <meta
-      expr:content="https://adelpro.github.io/check-hadith/images/256x256.webp"
+      expr:content="https://adelpro.github.io/check-hadithimages/256x256.webp"
       name="twitter:image:src"
     />
     <meta content="Algeria" name="geo.placename" />
@@ -76,7 +76,7 @@
       content="black-translucent"
       name="apple-mobile-web-app-status-bar-style"
     />
-    <meta content="Quranipfs" name="apple-mobile-web-app-title" />
+    <meta content="Check-hadith" name="apple-mobile-web-app-title" />
     <!-- Add to home screen for Windows-->
     <meta content="./images/512x512.webp" name="msapplication-TileImage" />
     <meta content="#000000" name="msapplication-TileColor" />
@@ -134,7 +134,12 @@
     >
       Menu <span></span>
     </button>
-    <nav class="nav-container" id="navigation">
+    <nav
+      class="nav-container"
+      id="navigation"
+      role="menu"
+      aria-labelledby="navigation-button"
+    >
       <header>
         <h2>الباحث في الحديث</h2>
       </header>
@@ -166,18 +171,18 @@
         <li role="none" itemprop="name">
           <a
             itemprop="url"
-            href=".\contact-us.html"
+            href="#"
             role="menuitem"
-            class="nav-link"
+            class="nav-link active-link"
             >إتصل بنا</a
           >
         </li>
         <li role="none" itemprop="name">
           <a
             itemprop="url"
-            href="#"
+            href=".\privacy.html"
             role="menuitem"
-            class="nav-link active-link"
+            class="nav-link"
             >سياسة الخصوصية</a
           >
         </li>
@@ -277,11 +282,7 @@
     </nav>
     <div class="overlay"></div>
     <!-- improve main element 3d movement -->
-    <header
-      class="center header"
-      itemscope
-      itemtype="http://schema.org/WPHeader"
-    >
+    <header class="center head" itemscope itemtype="http://schema.org/WPHeader">
       <img
         srcset="
           ./images/150x150.webp 150w,
@@ -296,53 +297,113 @@
         itemprop="image"
       />
     </header>
-    <main class="main">
-      <section class="center" style="padding: 10px">
-        <h6>بسم الله الرحمن الرحيم</h6>
-        <p>
-          نقدر مخاوفكم واهتمامكم بشأن خصوصية بياناتكم على الشبكة العنكبوتية،
-          لذلك قمنا باعداد هذه الصفحة لشرح سياسة الموقع في التعامل مع بياناتكم
-          ولمساعدتكم في فهم طبيعة البيانات التي نجمعها عند زيارتكم لموقعنا على
-          شبكة الانترنت وكيفية تعاملنا مع هذه البيانات الشخصية.
-        </p>
-        <h6>التصفح</h6>
-        <p>
-          لم يتم تصميم الموقع من أجل جمع بياناتك الشخصية من جهاز الكمبيوتر الخاص
-          بك أو من جهاز الهاتف أو اللوحة الرقمية أثناء تصفحك، ولكن سيتم فقط
-          استخدام البيانات المقدمة من قبلك بمعرفتك ومحض إرادتك لتخصيص تصفحك
-          للموقع كمثال:عدد الزيارات.
-        </p>
-        <p>
-          نحن نستعين بشركة قوقل من أجل تحليل معلومات الزوار لتحسيين نوعية
-          الخدمات و تطوير الموقع
-        </p>
-
-        <h6>الروابط للمواقع الأخرى على شبكة الإنترنت</h6>
-
-        <p>
-          قد يشتمل موقعنا على روابط لمواقع أخرى على شبكة الإنترنت ولا نعتبر
-          مسؤولين بأي شكل من الأشكال عن أساليب تعامل هذه المواقع مع بياناتك
-        </p>
-        <h6>إفشاء المعلومات</h6>
-        <p>
-          نحافظ على سرية كل بيانات الخصوصية الشخصية التي نتحصل عليها، ولن يتم
-          كشفها إلا بموجب القانون, أو لحماية حقوق الملكية الخاصة بهذا الموقع أو
-          الجهات المسؤولة عنه، لن نقوم ببيع معلوماتك أو المتاجرة بها لأي طرف
-          ثالث خارج هذا الموقع
-        </p>
-        <h6>عند الاتصال بنا</h6>
-        <p>
-          عند مراسلتك لنا عبر صفحة (اتصل بنا) سيتم التعامل مع كافة البيانات
-          المقدمة من طرفك بسرية .و سيتم استخدام البيانات التي تقدمها في الرد على
-          كافة طلباتك
-        </p>
-        <h6>أخيرا</h6>
-        <p>نحتفظ بالحق في تعديل بنود وشروط سياسة الخصوصية</p>
+    <main class="main center">
+      <h1>إتصل بنا</h1>
+      <section
+        classe="center"
+        style="width: 100%; max-width: 400; padding: 5px"
+      >
+        <form
+          action="javascript:void(0);"
+          method="post"
+          id="form"
+          class="center"
+          style="
+            align-items: flex-start;
+            padding: 10px;
+            background-color: #ccc;
+            width: 100%;
+            border-radius: 5px;
+          "
+        >
+          <label htmlFor="email" class="horizontal-spacing"
+            >البريد الإلكتروني</label
+          >
+          <input
+            class="horizontal-spacing"
+            type="text"
+            id="email"
+            placeholder="البريد الإلكتروني..."
+          />
+          <select id="category" name="category" class="horizontal-spacing">
+            <option value=" إختيار الموضوع" disabled selected id="select">
+              إختيار الموضوع
+            </option>
+            <option value="error">إبلاغ عن خطأ</option>
+            <option value="amelioration">اقتراح تحسينات</option>
+            <option value="other">طلبات أخرى</option>
+          </select>
+          <label htmlFor="message" class="horizontal-spaccing">الموضوع</label>
+          <textarea
+            class="horizontal-spacing"
+            id="message"
+            placeholder="كتابة الموضوع..."
+            rows="5"
+          >
+          </textarea>
+          <div
+            class="horizontal-spacing"
+            style="
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              padding: 10px;
+            "
+          >
+            <button type="submit" style="width: 200px">إرسال</button>
+          </div>
+        </form>
       </section>
     </main>
     <footer class="footer">
       <span class="center"> الباحث في الحديث - الإصدار 2 ©2021</span>
     </footer>
+    <script>
+      //form submission
+      const form = document.getElementById("form");
+      function submitForm(e) {
+        const email = document.getElementById("email");
+        const category = document.getElementById("category");
+        const message = document.getElementById("message");
+        const select = document.getElementById("select");
+        const projectID = "626f16dbf0485e0004efca50";
+        const uri = "https://feeder-node-1337.herokuapp.com/feedback/create";
+        const emailValidation =
+          /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if (!emailValidation.test(email.value)) {
+          alert("Invalid email");
+          return;
+        }
+        if (message.value === "") {
+          alert("No message");
+          return;
+        }
+        if (category.value === "إختيار الموضوع") {
+          alert("No Category");
+          return;
+        }
+        const data = {
+          projectId: projectID,
+          feedbackMsg: message.value,
+          feedbackEmail: email.value,
+          feedbackType: select.value,
+        };
+        fetch(uri, {
+          method: "post",
+          body: JSON.stringify(data),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then(() => alert("تم الإرسال بنجاح"))
+          .catch(() => alert("لم يتم الإرسال، يرجى إعادة المحاولة لاحقا"));
+        message.value = "";
+        email.value = "";
+        e.preventDefault();
+      }
+      form.addEventListener("submit", submitForm);
+      //form submission
+    </script>
     <script>
       //Menu
 
