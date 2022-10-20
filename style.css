@@ -294,7 +294,7 @@ main {
 }
 
 .active-link {
-  position: relative
+  position: relative;
 }
 
 .active-link span {
