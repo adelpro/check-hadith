@@ -20,7 +20,7 @@ const hadithFetch2 = async (data) => {
   const t = await data?.ahadith?.result;
   if (t && dorar && loader) {
     loader.className = "loader-hide";
-    dorar.innerHTML = `${t}`;
+    dorar.innerHTML = t;
   } else {
     dorar.innerHTML = "";
     loader.className = "center";
