@@ -28,14 +28,14 @@
     <meta content="summary" name="twitter:card" />
     <meta content="@adelpro" name="twitter:site" />
     <meta content="@adelpro" name="twitter:creator" />
-    <meta expr:content="الباحث في الحديث" name="twitter:title" />
+    <meta content="الباحث في الحديث" name="twitter:title" />
     <meta
-      expr:content="
+      content="
     يمكنك الموقع من البحث عن الأحاديث النبوية والتحقق من صحتها إنطلاقا من كلمة أو جملة من الحديث حيث يستعين بقاعدة بيانات موقع درر "
       name="description"
     />
     <meta
-      expr:content="https://adelpro.github.io/check-hadithimages/256x256.webp"
+      content="https://adelpro.github.io/check-hadithimages/256x256.webp"
       name="twitter:image:src"
     />
     <meta content="Algeria" name="geo.placename" />
@@ -106,50 +106,38 @@
       />
     </noscript>
     <!--Preload google font-->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-8RSXLH4V7G"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-8RSXLH4V7G");
-    </script>
-  </head>
+    </head>
 
   <body itemscope itemtype="http://schema.org/WebPage">
-    <button
+           <button
       href="#navigation"
       class="nav-trigger"
-      aria-haspopup="true"
-      aria-controls="navigation"
+      aria-controls="navigation-menu"
+      aria-expanded="false"
+      aria-haspopup="true"      
       id="navigation-button"
-    >
-      Menu <span></span>
+    >      Menu <span></span>
     </button>
     <nav
       class="nav-container"
       id="navigation"
-      aria-label="Main"
-      aria-labelledby="navigation-button"
+     aria-labelledby="navigation-button"
+     aria-label="Main navigation"
+      role="navigation"
     >
-      <header>
-        <h2>الباحث في الحديث</h2>
+      <header style="border: 1px solid rgb(87, 84, 84);">
       </header>
-      <ul class="nav">
-        <li role="none" itemprop="name">
-          <a itemprop="url" href=".\index.html" role="menuitem" class="nav-link"
+      <ul class="nav" id="navigation-menu">
+        <li itemprop="name" aria-label="home">
+          <a
+            itemprop="url"
+            href="./index.html"
+            class="nav-link active-link"
             >الصفحة الرئيسية</a
           >
         </li>
 
-        <li role="none" itemprop="name">
+        <li itemprop="name" aria-label="download">
           <a
             itemprop="url"
             href=".\download.html"
@@ -158,7 +146,7 @@
             >تطبيق الموقع</a
           >
         </li>
-        <li role="none" itemprop="name">
+        <li itemprop="name" aria-label="about us">
           <a
             itemprop="url"
             href=".\about-us.html"
@@ -167,16 +155,17 @@
             >حول الموقع</a
           >
         </li>
-        <li role="none" itemprop="name">
+        <li itemprop="name" aria-label="contact us">
           <a
             itemprop="url"
             href="#"
+            aria-current="page"
             role="menuitem"
-            class="nav-link active-link"
+            class="nav-link"
             >إتصل بنا</a
           >
         </li>
-        <li role="none" itemprop="name">
+        <li itemprop="name" aria-label="privacy">
           <a
             itemprop="url"
             href=".\privacy.html"
@@ -191,6 +180,7 @@
             class="smGlobalBtn"
             href="https://www.facebook.com/wathakker.wakf"
             target="_blanc"
+            aria-label="Facebook"
             ><i>
               <svg
                 aria-hidden="true"
@@ -213,6 +203,7 @@
             class="smGlobalBtn"
             href="https://twitter.com/adelpro"
             target="_blanc"
+            aria-label="Twitter"
             ><i
               ><svg
                 aria-hidden="true"
@@ -235,6 +226,7 @@
             class="smGlobalBtn"
             href="https://m.me/wathakker.wakf"
             target="_blanc"
+            aria-label="Messenger"
           >
             <i
               ><svg
@@ -258,6 +250,7 @@
             class="smGlobalBtn"
             href="https://www.t.me/wathakkerwakf"
             target="_blanc"
+            aria-label="Telegram"
             ><i
               ><svg
                 aria-hidden="true"
@@ -281,22 +274,25 @@
     </nav>
     <div class="overlay"></div>
     <!-- improve main element 3d movement -->
-    <header class="center head" itemscope itemtype="http://schema.org/WPHeader">
-      <img
-        srcset="
-          ./images/150x150.webp 150w,
-          ./images/256x256.webp 256w,
-          ./images/512x512.webp 512w,
-          ./images/800x800.webp 800w
-        "
-        src="./images/256x256.webp"
-        width="256"
-        height="265"
-        alt="check-hadith"
-        itemprop="image"
-      />
+    <header class="center head" itemscope itemtype="http://schema.org/WPHeader" aria-label="Header">
+      <div style="height:256px;width:256px,padding:0;">
+        <img
+          src="./images/256x256.webp" 
+          srcset="
+          ./images/256x256.webp 1x,
+          ./images/512x512.webp 2x,
+        "  
+          width= "256px"
+          height= "256px"
+          border="0"
+          alt="check-hadith"
+          itemprop="image"
+          style="object-fit: fill"
+        />
+      </div>
+      
     </header>
-    <main class="main center">
+    <main class="main center" aria-label="Main">
       <h1>إتصل بنا</h1>
       <section
         classe="center"
@@ -354,7 +350,7 @@
         </form>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" aria-label="Footer">
       <span class="center"> الباحث في الحديث - الإصدار 2 ©2021</span>
     </footer>
     <script>
@@ -427,5 +423,13 @@
       }
       loadServiceWorker();
     </script>
+        <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RSXLH4V7G"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8RSXLH4V7G');
+  </script>
   </body>
 </html>
