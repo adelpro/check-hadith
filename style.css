@@ -98,7 +98,7 @@ main {
 .nav-trigger {
   cursor: pointer;
   position: fixed;
-  z-index: 4;
+  z-index: 5;
   top: 40px;
   right: 40px;
   height: 44px;
@@ -164,7 +164,7 @@ main {
 
 .overlay {
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   left: 0;
   width: 100%;
@@ -182,7 +182,7 @@ main {
 
 .nav-container {
   position: fixed;
-  z-index: 3;
+  z-index: 4;
   top: 0;
   right: 0;
   height: 100%;
@@ -274,11 +274,13 @@ main {
 
 /* nav menu */
 .footer {
+  z-index: 2;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #aaa;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.3);
   color: white;
   text-align: center;
   font-size: small;
