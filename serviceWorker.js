@@ -36,7 +36,9 @@ const limitCacheSize = (name, size) => {
 self.addEventListener("install", (installEvent) => {
   installEvent.waitUntil(
     caches.open(staticCache).then((cache) => {
-      if (cache) cache.addAll(assets);
+      if (cache) {
+        cache.addAll(assets);
+      }
     })
   );
 });
