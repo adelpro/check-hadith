@@ -56,6 +56,6 @@ window.onload = () => {
   bsearch.addEventListener("click", (e) => {
     e.preventDefault();
     createScript(input.value);
-    hadithFetch2(dorar, loader);
+    hadithFetch2();
   });
 };
