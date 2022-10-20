@@ -107,7 +107,7 @@
       "name": "حول الموقع",
       "short_name": "حول الموقع",
       "description": "معلومات حول الموقع",
-      "url": "./about-us.html",
+      "url": "./check-hadith/about-us.html",
       "icons": [
         {
           "src": "images/192x192.png",
@@ -120,7 +120,7 @@
       "name": "سياسة الخصوصية",
       "short_name": "سياسة الخصوصية",
       "description": "سياسة الخصوصية للموقع",
-      "url": "./privacy.html",
+      "url": "./check-hadith/privacy.html",
       "icons": [
         {
           "src": "images/192x192.png",

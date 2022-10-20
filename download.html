@@ -109,41 +109,33 @@
   </head>
 
   <body itemscope itemtype="http://schema.org/WebPage">
-        <button
+    <button
       href="#navigation"
       class="nav-trigger"
       aria-controls="navigation-menu"
       aria-expanded="false"
-      aria-haspopup="true"      
+      aria-haspopup="true"
       id="navigation-button"
-    >      Menu <span></span>
+    >
+      Menu <span></span>
     </button>
     <nav
       class="nav-container"
       id="navigation"
-     aria-labelledby="navigation-button"
-     aria-label="Main navigation"
+      aria-labelledby="navigation-button"
+      aria-label="Main navigation"
       role="navigation"
     >
-      <header style="border: 1px solid rgb(87, 84, 84);">
-      </header>
+      <header style="border: 1px solid rgb(87, 84, 84)"></header>
       <ul class="nav" id="navigation-menu">
         <li itemprop="name" aria-label="home">
-          <a
-            itemprop="url"
-            href=".\index.html"
-            
-            class="nav-link active-link"
+          <a itemprop="url" href=".\index.html" class="nav-link active-link"
             >الصفحة الرئيسية</a
           >
         </li>
 
         <li itemprop="name" aria-label="download" aria-current="page">
-          <a
-            itemprop="url"
-            href="#"
-            role="menuitem"
-            class="nav-link"
+          <a itemprop="url" href="#" role="menuitem" class="nav-link"
             >تطبيق الموقع</a
           >
         </li>
@@ -274,17 +266,18 @@
     </nav>
     <div class="overlay"></div>
     <!-- improve main element 3d movement -->
-    <header class="center head" itemscope itemtype="http://schema.org/WPHeader" aria-label="Header">
-       <div style="height:256px;width:256px,padding:0;">
+    <header
+      class="center head"
+      itemscope
+      itemtype="http://schema.org/WPHeader"
+      aria-label="Header"
+    >
+      <div style="height: 256px; width: 256px; padding: 0">
         <img
-          src="./images/256x256.webp" 
-          srcset="
-          ./images/256x256.webp 1x,
-          ./images/512x512.webp 2x,
-        "  
-          width= "256px"
-          height= "256px"
-          border="0"
+          src="./images/256x256.webp"
+          srcset="./images/256x256.webp 1x, ./images/512x512.webp 2x"
+          width="256px"
+          height="256px"
           alt="check-hadith"
           itemprop="image"
           style="object-fit: fill"
@@ -346,7 +339,7 @@
       }
       loadServiceWorker();
     </script>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-8RSXLH4V7G"

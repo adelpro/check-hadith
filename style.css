@@ -186,8 +186,8 @@ main {
   top: 0;
   right: 0;
   height: 100%;
-  width: 90%;
-  max-width: 350px;
+  width: 100%;
+  max-width: 400px;
   padding: 2em 3.5em;
   background: #f3f3f3;
   overflow: auto;
@@ -195,6 +195,11 @@ main {
   transform: translateX(100%);
   transition: transform 0.5s cubic-bezier(0.07, 0.23, 0.34, 1);
   white-space: nowrap;
+}
+
+.nav-container header {
+  background-color: #4d4a4a;
+  margin-top: 60px;
 }
 
 .nav-open .nav-container {
@@ -287,9 +292,18 @@ main {
 }
 
 .active-link {
-  border-top: 2px solid #7786c4;
-  border-bottom: 2px solid #7786c4;
-  width: 100%;
+  position: relative
+}
+
+.active-link span {
+  position: absolute;
+  background-color: #1f2b3d;
+  width: 5px;
+  border-right: 1px solid gray;
+  height: 100%;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 .flex {
