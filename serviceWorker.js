@@ -1,5 +1,5 @@
-const staticCache = "Checkhadith-cache-v18";
-const dynamicCache = "Checkhadith-dynamic-v18";
+const staticCache = "Checkhadith-cache-v19";
+const dynamicCache = "Checkhadith-dynamic-v19";
 const assets = [
   "/",
   "./index.html",
@@ -26,7 +26,7 @@ const limitCacheSize = (name, size) => {
   caches.open(name).then((cache) => {
     cache.keys().then((keys) => {
       if (keys.length > size) {
-        cache.delete(keys[0]).then(limitCacheSize(name, size));
+        cache.delete(keys[0]).then(() => limitCacheSize(name, size));
       }
     });
   });
