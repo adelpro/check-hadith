@@ -1,5 +1,5 @@
-const staticCache = "Checkhadith-cache-v17";
-const dynamicCache = "Checkhadith-dynamic-v17";
+const staticCache = "Checkhadith-cache-v18";
+const dynamicCache = "Checkhadith-dynamic-v18";
 const assets = [
   "/",
   "./index.html",
@@ -7,7 +7,7 @@ const assets = [
   "./about-us.html",
   "./privacy.html",
   "./fallback.html",
-  "./style-min.js",
+  "./style-min.css",
   "./favicon.ico",
   "./images/16x16.webp",
   "./images/32x32.webp",

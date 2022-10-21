@@ -74,7 +74,7 @@
   box-sizing: border-box;
 }
 
-main {
+.nav-main {
   position: relative;
   z-index: 1;
   height: 100vh;
@@ -84,7 +84,7 @@ main {
   direction: rtl;
 }
 
-.nav-open main {
+.nav-open .nav-mainain {
   transform: scale(0.8);
 }
 
@@ -281,7 +281,6 @@ main {
   width: 100%;
   height: 30px;
   background-color: rgba(0, 0, 0, 0.3);
-  color: white;
   text-align: center;
   font-size: small;
 }
