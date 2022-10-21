@@ -26,6 +26,7 @@ const hadithFetch2 = async (data) => {
     loader.className = "center";
   }
 };
+
 window.onload = () => {
   /* focus cursor on search input on load */
   let input = document.getElementById("skey");

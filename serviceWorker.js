@@ -7,7 +7,7 @@ const assets = [
   "./about-us.html",
   "./privacy.html",
   "./fallback.html",
-  "./style.css",
+  "./style-min.js",
   "./favicon.ico",
   "./images/16x16.webp",
   "./images/32x32.webp",
