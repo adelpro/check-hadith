@@ -195,7 +195,7 @@
     function loadServiceWorker() {
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", function () {
-          navigator.serviceWorker.register("./serviceWorker.js", {
+          navigator.serviceWorker.register("./serviceWorker-min.js", {
             scope: "./",
           });
         });
