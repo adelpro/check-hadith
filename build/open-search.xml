@@ -1,0 +1,7 @@
+<!--TODO debug if working-->
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+    <ShortName>Check-hadith</ShortName>
+    <Description>Search for hadith nabawi using Dorar API</Description>
+    <Url type="text/html" template="https://adelpro.github.io/check-hadith/search?q={search_term_string}"/>
+</OpenSearchDescription>
