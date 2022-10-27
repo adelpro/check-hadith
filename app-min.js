@@ -1,3 +1,4 @@
+
 function createScript(e) {
   let t = `https://dorar.net/dorar_api.json?skey=${e}&callback=hadithFetch2`,
     a = document.createElement("script");

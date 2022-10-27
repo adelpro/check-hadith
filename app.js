@@ -1,18 +1,10 @@
-/* api call by adding script Dorar to the <head> */
-function createScript(key) {
-  const apiURL = `https://dorar.net/dorar_api.json?skey=${key}&callback=hadithFetch2`;
-  let scriptElement = document.createElement("script");
-  scriptElement.setAttribute("src", apiURL);
-  scriptElement.setAttribute("id", "jsonp");
-  const oldScriptElement = document.getElementById("jsonp");
-  const head = document.getElementsByTagName("head")[0];
-
-  if (!oldScriptElement) {
-    //if there is no script element in <head> then create new one
-    head.appendChild(scriptElement);
-  } else {
-    head.replaceChild(scriptElement, oldScriptElement);
-  }
+function createScript(e) {
+  let t = `https://dorar.net/dorar_api.json?skey=${e}&callback=hadithFetch2`,
+    a = document.createElement("script");
+  a.setAttribute("src", t), a.setAttribute("id", "jsonp");
+  let n = document.getElementById("jsonp"),
+    r = document.getElementsByTagName("head")[0];
+  n ? r.replaceChild(a, n) : r.appendChild(a);
 }
 const hadithFetch2 = async (data) => {
   let dorar = document.getElementById("dorar");
