@@ -26,7 +26,16 @@ const hadithFetch2 = async (data) => {
     loader.className = "center";
   }
 };
-
+/* Query search */
+const searchQ = () => {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const search = urlParams.get("search");
+  if (search?.length > 0) {
+    createScript(search);
+    hadithFetch2();
+  }
+};
 window.onload = () => {
   /* focus cursor on search input on load */
   let input = document.getElementById("skey");
@@ -45,7 +54,7 @@ window.onload = () => {
       bsearch.click();
     }
   });
-  /* lateral menu open on click */
+  /* Lateral menu open on click */
   function toggleNavigation(event) {
     event.preventDefault();
     body.classList.toggle("nav-open");
@@ -53,10 +62,12 @@ window.onload = () => {
   }
   navTrigger.addEventListener("click", toggleNavigation);
 
-  /* append Dorar script on <head> */
+  /* Append Dorar script on <head> on bsearch click event*/
   bsearch.addEventListener("click", (e) => {
     e.preventDefault();
     createScript(input.value);
     hadithFetch2();
   });
+  /* Executing search query */
+  searchQ();
 };
