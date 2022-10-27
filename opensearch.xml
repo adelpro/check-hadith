@@ -4,5 +4,4 @@
     <Description>Search for hadith nabawi using Dorar API</Description>
     <Image width="16" height="16" type="image/x-icon">[./favicon.ico]</Image>
     <Url type="text/html" method="get" template="https://adelpro.github.io/check-hadith?search={search_term_string}"/>
-    <moz:SearchForm>[https://adelpro.github.io/check-hadith]</moz:SearchForm>
 </OpenSearchDescription>
