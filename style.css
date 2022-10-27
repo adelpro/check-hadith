@@ -216,7 +216,9 @@
 .nav {
   list-style: none;
   padding: 0;
+  direction: ltr;
 }
+
 
 .nav-link {
   padding: 0.4em 0;
@@ -224,7 +226,7 @@
   text-decoration: none;
   color: #1f2b3d;
   transform: translateZ(0);
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: "Almarai", sans-serif;
   display: inline-block;
   transition: ease-in-out 0.3s;
