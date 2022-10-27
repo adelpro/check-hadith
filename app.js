@@ -19,6 +19,7 @@ const hadithFetch2 = async (data) => {
   }
 };
 /* Query search */
+//TODO change input value to search query value
 const searchQ = () => {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
