@@ -1,62 +1,42 @@
-/* api call by adding script Dorar to the <head> */
-function createScript(key) {
-  const apiURL = `https://dorar.net/dorar_api.json?skey=${key}&callback=hadithFetch2`;
-  let scriptElement = document.createElement("script");
-  scriptElement.setAttribute("src", apiURL);
-  scriptElement.setAttribute("id", "jsonp");
-  const oldScriptElement = document.getElementById("jsonp");
-  const head = document.getElementsByTagName("head")[0];
-
-  if (!oldScriptElement) {
-    //if there is no script element in <head> then create new one
-    head.appendChild(scriptElement);
-  } else {
-    head.replaceChild(scriptElement, oldScriptElement);
-  }
+function createScript(e) {
+  let t = `https://dorar.net/dorar_api.json?skey=${e}&callback=hadithFetch2`,
+    a = document.createElement("script");
+  a.setAttribute("src", t), a.setAttribute("id", "jsonp");
+  let n = document.getElementById("jsonp"),
+    r = document.getElementsByTagName("head")[0];
+  n ? r.replaceChild(a, n) : r.appendChild(a);
 }
-const hadithFetch2 = async (data) => {
-  let dorar = document.getElementById("dorar");
-  let loader = document.getElementById("loader");
-  const t = await data?.ahadith?.result;
-  if (t && dorar && loader) {
-    loader.className = "loader-hide";
-    dorar.innerHTML = t;
-  } else {
-    dorar.innerHTML = "";
-    loader.className = "center";
-  }
-};
-
+const hadithFetch2 = async (e) => {
+    let t = document.getElementById("dorar"),
+      a = document.getElementById("loader"),
+      n = await e?.ahadith?.result;
+    n && t && a
+      ? ((a.className = "loader-hide"), (t.innerHTML = n))
+      : ((t.innerHTML = ""), (a.className = "center"));
+  },
+  searchQ = () => {
+    let e = window.location.search,
+      t = new URLSearchParams(e),
+      a = t.get("search");
+    a?.length > 0 && (createScript(a), hadithFetch2());
+  };
 window.onload = () => {
-  /* focus cursor on search input on load */
-  let input = document.getElementById("skey");
-  let bsearch = document.getElementById("bsearch");
-  let navTrigger = document.getElementById("navigation-button");
-  let body = document.getElementsByTagName("body")[0];
-  input.focus();
-  /* script to assign "enter" key press to bsearch button */
-  // Execute a function when the user presses a key on the keyboard
-  input.addEventListener("keypress", function (event) {
-    /* If the user presses the "Enter" key on the keyboard */
-    if (event.key === "Enter") {
-      // Cancel the default action, if needed
-      event.preventDefault();
-      // Trigger the button element with a click
-      bsearch.click();
-    }
-  });
-  /* lateral menu open on click */
-  function toggleNavigation(event) {
-    event.preventDefault();
-    body.classList.toggle("nav-open");
-    navTrigger.toggleAttribute("aria-expanded");
+  let e = document.getElementById("skey"),
+    t = document.getElementById("bsearch"),
+    a = document.getElementById("navigation-button"),
+    n = document.getElementsByTagName("body")[0];
+  function r(e) {
+    e.preventDefault(),
+      n.classList.toggle("nav-open"),
+      a.toggleAttribute("aria-expanded");
   }
-  navTrigger.addEventListener("click", toggleNavigation);
-
-  /* append Dorar script on <head> */
-  bsearch.addEventListener("click", (e) => {
-    e.preventDefault();
-    createScript(input.value);
-    hadithFetch2();
-  });
+  e.focus(),
+    e.addEventListener("keypress", function (e) {
+      "Enter" === e.key && (e.preventDefault(), t.click());
+    }),
+    a.addEventListener("click", r),
+    t.addEventListener("click", (t) => {
+      t.preventDefault(), createScript(e.value), hadithFetch2();
+    }),
+    searchQ();
 };
