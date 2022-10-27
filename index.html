@@ -73,23 +73,8 @@
   <!--Preload google font-->
   <meta name="yandex-verification" content="9075214a9a0b793a" />
   <meta name="msvalidate.01" content="EEED389712803AACF544071A668E122B" />
-  <link rel="search" href="./opensearch.xml" type="application/opensearchdescription+xml" title="check-hadith" />
-  <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "url": "https://adelpro.github.io/check-hadith",
-        "name" : "الباحث في الحديث",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": {
-            "@type": "EntryPoint",
-            "urlTemplate": "https://adelpro.github.io/check-hadith?search={search_term_string}"
-          },
-          "query-input": "required name=search_term_string"
-        }
-      }
-      </script>
+  <link rel="search" href="./opensearch.min.xml" type="application/opensearchdescription+xml" title="check-hadith" />
+
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -100,7 +85,8 @@
   <nav class="nav-container" id="navigation" aria-labelledby="navigation-button" aria-label="Main navigation"
     role="navigation">
     <header></header>
-    <ul class="nav" id="navigation-menu" role="menubar" aria-label="Navigation Menu">
+    <ul class="nav" id="navigation-menu" role="menubar" aria-label="Navigation Menu" itemscope
+      itemtype="http://www.schema.org/SiteNavigationElement">
       <li itemprop="name" role="none" class="active-link">
         <span></span>
         <a itemprop="url" href="#" class="nav-link" role="menuitem" aria-label="home" aria-current="page">الصفحة
@@ -172,8 +158,10 @@
     </div>
   </header>
   <filter class="center" style="padding: 5px">
-    <div class="search" dir="rtl">
-      <input type="text" placeholder="بحث..." id="skey" autocomplete="off" aria-label="Search" />
+    <meta itemprop="url" content="https://adelpro.github.io/check-hadith" />
+    <div class="search" dir="rtl" itemprop="potentialAction" itemscope itemtype="https://schema.org/SearchAction">
+      <meta itemprop="target" content="https://adelpro.github.io/check-hadith?search={skey}" />
+      <input type="text" placeholder="بحث..." id="skey" autocomplete="off" aria-label="Search" itemprop="query-input" />
       <button id="bsearch">⌕</button>
     </div>
   </filter>
@@ -187,8 +175,12 @@
       </main>
     </section>
   </main>
-  <footer class="footer center" aria-label="Footer">
-    <span class="center"> الباحث في الحديث - الإصدار 2 ©2021</span>
+  <footer class="footer center" aria-label="Footer" itemscope itemtype="http://schema.org/WPFooter">
+    <span itemprop="copyrightHolder" itemscope itemtype="http://schema.org/WebSite" class="footer">
+      <span itemprop="name" class="h-card"> الباحث في الحديث - الإصدار 2 - </span>
+
+      <span itemprop="copyrightYear">2021&#169;</span>
+    </span>
   </footer>
   <script src="./app-min.js" async></script>
   <script>
@@ -202,7 +194,7 @@
         });
       }
     }
-    //loadServiceWorker();
+    loadServiceWorker();
   </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RSXLH4V7G"></script>

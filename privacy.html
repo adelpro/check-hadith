@@ -72,7 +72,8 @@
   <nav class="nav-container" id="navigation" aria-labelledby="navigation-button" aria-label="Main navigation"
     role="navigation">
     <header></header>
-    <ul class="nav" id="navigation-menu">
+    <ul class="nav" id="navigation-menu" role="menubar" aria-label="Navigation Menu" itemscope
+      itemtype="http://www.schema.org/SiteNavigationElement">
       <li itemprop="name" role="none">
         <a itemprop="url" href=".\index.html" class="nav-link" role="menuitem" aria-label="home">الصفحة
           الرئيسية</a>
@@ -181,8 +182,11 @@
       <p>نحتفظ بالحق في تعديل بنود وشروط سياسة الخصوصية</p>
     </section>
   </main>
-  <footer class="footer center" aria-label="Footer">
-    <span class="center"> الباحث في الحديث - الإصدار 2 ©2021</span>
+  <footer class="footer center" aria-label="Footer" itemscope itemtype="http://schema.org/WPFooter">
+    <span itemprop="copyrightHolder" itemscope itemtype="http://schema.org/WebSite" class="footer">
+      <span itemprop="name" class="h-card"> الباحث في الحديث - الإصدار 2 - </span>
+      <span itemprop="copyrightYear">2021&#169;</span>
+    </span>
   </footer>
   <script>
     //Menu
