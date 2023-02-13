@@ -287,6 +287,10 @@
   font-size: small;
 }
 
+.footer span {
+  margin: 3px
+}
+
 .center {
   display: flex;
   flex-direction: row;
