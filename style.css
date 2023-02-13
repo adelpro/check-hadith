@@ -276,6 +276,9 @@
 
 /* nav menu */
 .footer {
+  justify-content: center;
+  display: flex;
+  align-items: center;
   z-index: 2;
   position: fixed;
   left: 0;
